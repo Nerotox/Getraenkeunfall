@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		853C9B5C20CD59C700BCC2CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C9B5B20CD59C700BCC2CD /* AppDelegate.swift */; };
-		853C9B5E20CD59C700BCC2CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C9B5D20CD59C700BCC2CD /* ViewController.swift */; };
-		853C9B6120CD59C700BCC2CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853C9B5F20CD59C700BCC2CD /* Main.storyboard */; };
 		853C9B6420CD59C700BCC2CD /* Getraenkeunfall.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 853C9B6220CD59C700BCC2CD /* Getraenkeunfall.xcdatamodeld */; };
 		853C9B6620CD59C900BCC2CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853C9B6520CD59C900BCC2CD /* Assets.xcassets */; };
 		853C9B6920CD59C900BCC2CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853C9B6720CD59C900BCC2CD /* LaunchScreen.storyboard */; };
 		853C9B7420CD59C900BCC2CD /* GetraenkeunfallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C9B7320CD59C900BCC2CD /* GetraenkeunfallTests.swift */; };
 		853C9B7F20CD59C900BCC2CD /* GetraenkeunfallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C9B7E20CD59C900BCC2CD /* GetraenkeunfallUITests.swift */; };
+		853C9B8D20CD6F5900BCC2CD /* Getraenkeunfall_Rules.csv in Resources */ = {isa = PBXBuildFile; fileRef = 853C9B8C20CD6F5900BCC2CD /* Getraenkeunfall_Rules.csv */; };
+		853C9B9120CD6FD600BCC2CD /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C9B8E20CD6FD500BCC2CD /* OptionsViewController.swift */; };
+		853C9B9220CD6FD600BCC2CD /* StringLinesExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C9B8F20CD6FD600BCC2CD /* StringLinesExtension.swift */; };
+		853C9B9320CD6FD600BCC2CD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C9B9020CD6FD600BCC2CD /* HomeViewController.swift */; };
+		853C9B9520CD6FFA00BCC2CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853C9B9420CD6FFA00BCC2CD /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +40,6 @@
 /* Begin PBXFileReference section */
 		853C9B5820CD59C700BCC2CD /* Getraenkeunfall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Getraenkeunfall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		853C9B5B20CD59C700BCC2CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		853C9B5D20CD59C700BCC2CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		853C9B6020CD59C700BCC2CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		853C9B6320CD59C700BCC2CD /* Getraenkeunfall.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Getraenkeunfall.xcdatamodel; sourceTree = "<group>"; };
 		853C9B6520CD59C900BCC2CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		853C9B6820CD59C900BCC2CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,11 @@
 		853C9B7A20CD59C900BCC2CD /* GetraenkeunfallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetraenkeunfallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		853C9B7E20CD59C900BCC2CD /* GetraenkeunfallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetraenkeunfallUITests.swift; sourceTree = "<group>"; };
 		853C9B8020CD59C900BCC2CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		853C9B8C20CD6F5900BCC2CD /* Getraenkeunfall_Rules.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Getraenkeunfall_Rules.csv; sourceTree = "<group>"; };
+		853C9B8E20CD6FD500BCC2CD /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		853C9B8F20CD6FD600BCC2CD /* StringLinesExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringLinesExtension.swift; sourceTree = "<group>"; };
+		853C9B9020CD6FD600BCC2CD /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		853C9B9420CD6FFA00BCC2CD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,10 +106,13 @@
 			isa = PBXGroup;
 			children = (
 				853C9B5B20CD59C700BCC2CD /* AppDelegate.swift */,
-				853C9B5D20CD59C700BCC2CD /* ViewController.swift */,
-				853C9B5F20CD59C700BCC2CD /* Main.storyboard */,
-				853C9B6520CD59C900BCC2CD /* Assets.xcassets */,
+				853C9B9020CD6FD600BCC2CD /* HomeViewController.swift */,
+				853C9B8E20CD6FD500BCC2CD /* OptionsViewController.swift */,
+				853C9B8F20CD6FD600BCC2CD /* StringLinesExtension.swift */,
+				853C9B8C20CD6F5900BCC2CD /* Getraenkeunfall_Rules.csv */,
+				853C9B9420CD6FFA00BCC2CD /* Main.storyboard */,
 				853C9B6720CD59C900BCC2CD /* LaunchScreen.storyboard */,
+				853C9B6520CD59C900BCC2CD /* Assets.xcassets */,
 				853C9B6A20CD59C900BCC2CD /* Info.plist */,
 				853C9B6220CD59C700BCC2CD /* Getraenkeunfall.xcdatamodeld */,
 			);
@@ -233,8 +242,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				853C9B6920CD59C900BCC2CD /* LaunchScreen.storyboard in Resources */,
+				853C9B8D20CD6F5900BCC2CD /* Getraenkeunfall_Rules.csv in Resources */,
 				853C9B6620CD59C900BCC2CD /* Assets.xcassets in Resources */,
-				853C9B6120CD59C700BCC2CD /* Main.storyboard in Resources */,
+				853C9B9520CD6FFA00BCC2CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,8 +270,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				853C9B6420CD59C700BCC2CD /* Getraenkeunfall.xcdatamodeld in Sources */,
-				853C9B5E20CD59C700BCC2CD /* ViewController.swift in Sources */,
+				853C9B9220CD6FD600BCC2CD /* StringLinesExtension.swift in Sources */,
+				853C9B9120CD6FD600BCC2CD /* OptionsViewController.swift in Sources */,
 				853C9B5C20CD59C700BCC2CD /* AppDelegate.swift in Sources */,
+				853C9B9320CD6FD600BCC2CD /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +309,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		853C9B5F20CD59C700BCC2CD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				853C9B6020CD59C700BCC2CD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		853C9B6720CD59C900BCC2CD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
