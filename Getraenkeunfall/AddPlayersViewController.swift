@@ -12,6 +12,8 @@ class AddPlayersViewController: UIViewController, UITextFieldDelegate, UITableVi
     
     var playerNames:[String] = []
     
+    var rules: Rules?
+    
     @IBOutlet weak var playerNameTextField: UITextField!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var playerNamesTableView: UITableView!
@@ -53,5 +55,13 @@ class AddPlayersViewController: UIViewController, UITextFieldDelegate, UITableVi
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is GameScreenViewController {
+            let dest = segue.destination as? GameScreenViewController
+            dest?.rules = rules
+            dest?.players = playerNames
+        }
     }
 }

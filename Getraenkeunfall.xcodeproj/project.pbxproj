@@ -20,6 +20,7 @@
 		853C9B9520CD6FFA00BCC2CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853C9B9420CD6FFA00BCC2CD /* Main.storyboard */; };
 		853C9B9720CD903300BCC2CD /* AddPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C9B9620CD903300BCC2CD /* AddPlayersViewController.swift */; };
 		853C9B9B20CDAD6900BCC2CD /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C9B9A20CDAD6900BCC2CD /* Rules.swift */; };
+		853C9B9D20D1291F00BCC2CD /* GameScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C9B9C20D1291F00BCC2CD /* GameScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		853C9B9420CD6FFA00BCC2CD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		853C9B9620CD903300BCC2CD /* AddPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayersViewController.swift; sourceTree = "<group>"; };
 		853C9B9A20CDAD6900BCC2CD /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
+		853C9B9C20D1291F00BCC2CD /* GameScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				853C9B9A20CDAD6900BCC2CD /* Rules.swift */,
 				853C9B8E20CD6FD500BCC2CD /* OptionsViewController.swift */,
 				853C9B8F20CD6FD600BCC2CD /* StringLinesExtension.swift */,
+				853C9B9C20D1291F00BCC2CD /* GameScreenViewController.swift */,
 				853C9B8C20CD6F5900BCC2CD /* Getraenkeunfall_Rules.csv */,
 				853C9B9420CD6FFA00BCC2CD /* Main.storyboard */,
 				853C9B6720CD59C900BCC2CD /* LaunchScreen.storyboard */,
@@ -277,6 +280,7 @@
 			files = (
 				853C9B6420CD59C700BCC2CD /* Getraenkeunfall.xcdatamodeld in Sources */,
 				853C9B9220CD6FD600BCC2CD /* StringLinesExtension.swift in Sources */,
+				853C9B9D20D1291F00BCC2CD /* GameScreenViewController.swift in Sources */,
 				853C9B9120CD6FD600BCC2CD /* OptionsViewController.swift in Sources */,
 				853C9B5C20CD59C700BCC2CD /* AppDelegate.swift in Sources */,
 				853C9B9320CD6FD600BCC2CD /* HomeViewController.swift in Sources */,

@@ -209,6 +209,9 @@
                                         <integer key="value" value="9"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="fJl-7a-dkl" kind="show" id="7zT-uO-DDJ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a new person" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HE-Z0-nsd">
                                 <rect key="frame" x="0.0" y="80" width="375" height="35"/>
@@ -276,8 +279,82 @@
             </objects>
             <point key="canvasLocation" x="1182" y="117"/>
         </scene>
+        <!--Game Screen View Controller-->
+        <scene sceneID="5Y7-YT-ciG">
+            <objects>
+                <viewController id="fJl-7a-dkl" customClass="GameScreenViewController" customModule="Getraenkeunfall" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e4z-PX-kRL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFU-Uu-3G0">
+                                <rect key="frame" x="309" y="36" width="50" height="50"/>
+                                <state key="normal" image="Settings">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addButtonClicked:" destination="gU7-zz-T3U" eventType="touchUpInside" id="R2Z-ed-HPJ"/>
+                                    <segue destination="ii9-xE-Moy" kind="show" id="tRH-xY-Tt4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHp-lT-HvT">
+                                <rect key="frame" x="16" y="270" width="343" height="39.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AuX-Kl-33c">
+                                <rect key="frame" x="243" y="36" width="50" height="50"/>
+                                <state key="normal" image="addPlayers">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addButtonClicked:" destination="gU7-zz-T3U" eventType="touchUpInside" id="7BQ-Mg-JZ5"/>
+                                    <segue destination="gU7-zz-T3U" kind="show" id="ytL-n8-DN2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="mFU-Uu-3G0" firstAttribute="leading" secondItem="AuX-Kl-33c" secondAttribute="trailing" constant="16" id="1O1-9z-1vu"/>
+                            <constraint firstItem="OZJ-Pk-sWX" firstAttribute="trailing" secondItem="mFU-Uu-3G0" secondAttribute="trailing" constant="16" id="NbC-t6-Aka"/>
+                            <constraint firstAttribute="trailing" secondItem="LHp-lT-HvT" secondAttribute="trailing" constant="16" id="S2z-D2-tmB"/>
+                            <constraint firstItem="LHp-lT-HvT" firstAttribute="centerX" secondItem="e4z-PX-kRL" secondAttribute="centerX" id="mF6-QY-LYI"/>
+                            <constraint firstItem="LHp-lT-HvT" firstAttribute="leading" secondItem="e4z-PX-kRL" secondAttribute="leading" constant="16" id="n0X-NO-T33"/>
+                            <constraint firstItem="LHp-lT-HvT" firstAttribute="top" secondItem="OZJ-Pk-sWX" secondAttribute="top" constant="250" id="swB-rh-yhd"/>
+                            <constraint firstItem="AuX-Kl-33c" firstAttribute="top" secondItem="OZJ-Pk-sWX" secondAttribute="top" constant="16" id="zAJ-df-tRk"/>
+                            <constraint firstItem="mFU-Uu-3G0" firstAttribute="top" secondItem="OZJ-Pk-sWX" secondAttribute="top" constant="16" id="zbR-Ky-Gjw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OZJ-Pk-sWX"/>
+                    </view>
+                    <connections>
+                        <outlet property="gameView" destination="e4z-PX-kRL" id="wcf-iv-Kc0"/>
+                        <outlet property="ruleLabel" destination="LHp-lT-HvT" id="Sgr-Dv-DeI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4hl-hg-EXq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2194" y="116"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Settings" width="50" height="50"/>
+        <image name="addPlayers" width="50" height="50"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fAS-YS-Pgc"/>
+        <segue reference="ytL-n8-DN2"/>
+        <segue reference="tRH-xY-Tt4"/>
+        <segue reference="oDL-j6-PAr"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -101,9 +101,9 @@ class HomeViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is OptionsViewController{
-            //let destvc = segue.destination as? OptionsViewController
-            //destvc?.selectedDifficulty = self.selectedDifficulty
+        if segue.destination is AddPlayersViewController{
+            let dest = segue.destination as? AddPlayersViewController
+            dest?.rules = rules
         }
     }
 }
