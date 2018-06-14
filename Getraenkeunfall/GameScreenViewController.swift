@@ -30,8 +30,9 @@ class GameScreenViewController: UIViewController {
         ruleLabel.text = getPlayableRule(rule: rule)
     }
     func getPlayableRule(rule:String) -> String {
-        
+        return rule
     }
+    
     func getNextRule() -> String {
         for role in roleGamesCurrentlyInPlay {
             if role.value == 0 {
@@ -57,7 +58,7 @@ class GameScreenViewController: UIViewController {
         case 10:
             break;
         default:
-            <#code#>
+            print("default")
         }
         
         return "test2"

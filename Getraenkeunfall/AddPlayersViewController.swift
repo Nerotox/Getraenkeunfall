@@ -7,61 +7,139 @@
 //
 
 import UIKit
+import Speech
 
-class AddPlayersViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
-    
-    var playerNames:[String] = []
-    
-    var rules: Rules?
-    
+class PlayerCell : UITableViewCell{
     @IBOutlet weak var playerNameTextField: UITextField!
+    @IBOutlet weak var speakerButton: UIButton!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+}
+
+class AddPlayerCell : UITableViewCell{
+    @IBOutlet weak var addPlayerButton: UIButton!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+}
+
+class AddPlayersViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource{
+    
+    var playerNames:[String] = ["", "", ""]
+    var rules: Rules?
+    var synthAV: AVSpeechSynthesizer?
+
     @IBOutlet weak var addButton: UIButton!
-    @IBOutlet weak var playerNamesTableView: UITableView!
     @IBOutlet weak var startGameButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var playerTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.playerNameTextField.delegate = self
-        self.playerNamesTableView.delegate = self
-        self.playerNamesTableView.dataSource = self
+        
+        self.playerTableView.delegate = self
+        self.playerTableView.dataSource = self
+        
         //Makes the keyboard go away where tapped anywhere in the view.
-        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
+      self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return playerNames.count
+        return playerNames.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = playerNamesTableView.dequeueReusableCell(withIdentifier: "nameCell")!
-        cell.textLabel?.text = playerNames[indexPath.row]
-        return cell
+        
+        if indexPath.row != playerNames.count{
+            let cell = playerTableView.dequeueReusableCell(withIdentifier: "PlayerCell", for: indexPath) as! PlayerCell
+            let playerName = playerNames[indexPath.row]
+            cell.playerNameTextField.text = playerName
+            cell.playerNameTextField.placeholder = "Spieler \(indexPath.row + 1)"
+            //cell.speakerButton
+            return cell
+        }else{
+            let cell = playerTableView.dequeueReusableCell(withIdentifier: "AddPlayerCell", for: indexPath) as! AddPlayerCell
+            return cell
+        }
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        playerNames.remove(at: indexPath.row)
-        playerNamesTableView.deleteRows(at: [indexPath], with: .automatic)
-    }
+
+
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+//        playerNames.remove(at: indexPath.row)
+//        playerTableView.deleteRows(at: [indexPath], with: .automatic)
+//    }
     
     //Closes the keyboard when the done button is clicked.
+    
     @IBAction func addButtonClicked(_ sender: Any) {
-        if let name = playerNameTextField.text {
-            playerNames.append(name)
-        }
-        playerNameTextField.text = ""
-        playerNamesTableView.reloadData()
+            setDataSourceFromCells()
+            playerNames.append("")
+            playerTableView.reloadData()
+            playerTableView.scrollToRow(at: IndexPath(item: playerNames.count, section: 0), at: UITableViewScrollPosition.bottom, animated: true)
     }
+    
+    @IBAction func playAudioForName(sender: UIButton){
+        if let superview = sender.superview{
+            for subview in superview.subviews
+            {
+                if let textField = subview as? UITextField
+                {
+                   playAudioFromLabel(textfield: textField)
+                }
+            }
+        }
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    @IBAction func playAudioFromLabel(textfield: UITextField){
+        if let text = textfield.text{
+            let speechUtterance = AVSpeechUtterance(string: text)
+            speechUtterance.voice = AVSpeechSynthesisVoice(language: "de-DE")
+            
+            speechUtterance.rate = 0.5
+            speechUtterance.pitchMultiplier = 1.15
+            
+            //speechUtterance.volume //probably uses system volume
+            
+            //speechUtterance.voice = AVSpeechSynthesisVoice(identifier: "")
+            
+            synthAV = AVSpeechSynthesizer()
+            synthAV!.speak(speechUtterance)
+        }
+    }
+    
+    func setDataSourceFromCells(){
+        for (index, cell) in playerTableView.visibleCells.enumerated() {
+            if let playerCell = cell as? PlayerCell {
+                playerNames[index] = playerCell.playerNameTextField.text!
+            }
+        }
+    }
+    
+    func prepPlayerNames(){
+        setDataSourceFromCells()
+        for (index, name) in playerNames.enumerated(){
+                playerNames[index] = name.trimmingCharacters(in: .whitespacesAndNewlines)
+            }
+        playerNames = playerNames.filter { $0 != "" }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is GameScreenViewController {
             let dest = segue.destination as? GameScreenViewController
             dest?.rules = rules
+            prepPlayerNames()
             dest?.players = playerNames
         }
     }
+    
 }
+
