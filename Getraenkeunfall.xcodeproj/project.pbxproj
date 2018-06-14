@@ -13,7 +13,6 @@
 		853C9B6920CD59C900BCC2CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853C9B6720CD59C900BCC2CD /* LaunchScreen.storyboard */; };
 		853C9B7420CD59C900BCC2CD /* GetraenkeunfallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C9B7320CD59C900BCC2CD /* GetraenkeunfallTests.swift */; };
 		853C9B7F20CD59C900BCC2CD /* GetraenkeunfallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C9B7E20CD59C900BCC2CD /* GetraenkeunfallUITests.swift */; };
-		853C9B8D20CD6F5900BCC2CD /* Getraenkeunfall_Rules.csv in Resources */ = {isa = PBXBuildFile; fileRef = 853C9B8C20CD6F5900BCC2CD /* Getraenkeunfall_Rules.csv */; };
 		853C9B9120CD6FD600BCC2CD /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C9B8E20CD6FD500BCC2CD /* OptionsViewController.swift */; };
 		853C9B9220CD6FD600BCC2CD /* StringLinesExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C9B8F20CD6FD600BCC2CD /* StringLinesExtension.swift */; };
 		853C9B9320CD6FD600BCC2CD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C9B9020CD6FD600BCC2CD /* HomeViewController.swift */; };
@@ -21,6 +20,7 @@
 		853C9B9720CD903300BCC2CD /* AddPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C9B9620CD903300BCC2CD /* AddPlayersViewController.swift */; };
 		853C9B9B20CDAD6900BCC2CD /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C9B9A20CDAD6900BCC2CD /* Rules.swift */; };
 		853C9B9D20D1291F00BCC2CD /* GameScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C9B9C20D1291F00BCC2CD /* GameScreenViewController.swift */; };
+		9573F99B20D32D1B003E4A17 /* Getraenkeunfall_Rules.csv in Resources */ = {isa = PBXBuildFile; fileRef = 9573F99A20D32D1B003E4A17 /* Getraenkeunfall_Rules.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +53,6 @@
 		853C9B7A20CD59C900BCC2CD /* GetraenkeunfallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetraenkeunfallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		853C9B7E20CD59C900BCC2CD /* GetraenkeunfallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetraenkeunfallUITests.swift; sourceTree = "<group>"; };
 		853C9B8020CD59C900BCC2CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		853C9B8C20CD6F5900BCC2CD /* Getraenkeunfall_Rules.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Getraenkeunfall_Rules.csv; sourceTree = "<group>"; };
 		853C9B8E20CD6FD500BCC2CD /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		853C9B8F20CD6FD600BCC2CD /* StringLinesExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringLinesExtension.swift; sourceTree = "<group>"; };
 		853C9B9020CD6FD600BCC2CD /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +60,7 @@
 		853C9B9620CD903300BCC2CD /* AddPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayersViewController.swift; sourceTree = "<group>"; };
 		853C9B9A20CDAD6900BCC2CD /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
 		853C9B9C20D1291F00BCC2CD /* GameScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreenViewController.swift; sourceTree = "<group>"; };
+		9573F99A20D32D1B003E4A17 /* Getraenkeunfall_Rules.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Getraenkeunfall_Rules.csv; path = ../../../../Downloads/Getraenkeunfall_Rules.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,9 +118,9 @@
 				853C9B8E20CD6FD500BCC2CD /* OptionsViewController.swift */,
 				853C9B8F20CD6FD600BCC2CD /* StringLinesExtension.swift */,
 				853C9B9C20D1291F00BCC2CD /* GameScreenViewController.swift */,
-				853C9B8C20CD6F5900BCC2CD /* Getraenkeunfall_Rules.csv */,
 				853C9B9420CD6FFA00BCC2CD /* Main.storyboard */,
 				853C9B6720CD59C900BCC2CD /* LaunchScreen.storyboard */,
+				9573F99A20D32D1B003E4A17 /* Getraenkeunfall_Rules.csv */,
 				853C9B6520CD59C900BCC2CD /* Assets.xcassets */,
 				853C9B6A20CD59C900BCC2CD /* Info.plist */,
 				853C9B6220CD59C700BCC2CD /* Getraenkeunfall.xcdatamodeld */,
@@ -251,7 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				853C9B6920CD59C900BCC2CD /* LaunchScreen.storyboard in Resources */,
-				853C9B8D20CD6F5900BCC2CD /* Getraenkeunfall_Rules.csv in Resources */,
+				9573F99B20D32D1B003E4A17 /* Getraenkeunfall_Rules.csv in Resources */,
 				853C9B6620CD59C900BCC2CD /* Assets.xcassets in Resources */,
 				853C9B9520CD6FFA00BCC2CD /* Main.storyboard in Resources */,
 			);
