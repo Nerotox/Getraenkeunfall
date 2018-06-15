@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Speech
 
 class GameScreenViewController: UIViewController {
     
@@ -14,6 +15,7 @@ class GameScreenViewController: UIViewController {
     var players: [String]?
     var roleGamesCurrentlyInPlay: Dictionary<String, Int> = [:]
     var roleGamesSolutionInPlay: Dictionary<String, String> = [:]
+    let synthAV = AVSpeechSynthesizer()
     
     @IBOutlet weak var ruleLabel: UILabel!
     @IBOutlet var gameView: UIView!
@@ -23,10 +25,15 @@ class GameScreenViewController: UIViewController {
         let gesture = UITapGestureRecognizer(target: self, action:  #selector(self.nextRule))
         self.gameView.addGestureRecognizer(gesture)
         ruleLabel.text = getNextRule()
+        let speechUtterance = GU_Speech.getSpeechUtterance(text: ruleLabel.text!, setting: GU_Speech.SpeechSetting.normal)
+        synthAV.speak(speechUtterance)
     }
     
     @objc func nextRule(sender : UITapGestureRecognizer) {
         ruleLabel.text = getNextRule()
+        synthAV.pauseSpeaking(at: AVSpeechBoundary.immediate)
+        let speechUtterance = GU_Speech.getSpeechUtterance(text: ruleLabel.text!, setting: GU_Speech.SpeechSetting.normal)
+        synthAV.speak(speechUtterance)
     }
     
     func getNextRule() -> String {

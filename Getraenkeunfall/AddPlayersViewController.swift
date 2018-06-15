@@ -30,7 +30,7 @@ class AddPlayersViewController: UIViewController, UITextFieldDelegate, UITableVi
     
     var playerNames:[String] = ["", "", ""]
     var rules: Rules?
-    var synthAV: AVSpeechSynthesizer?
+    let synthAV = AVSpeechSynthesizer()
 
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var startGameButton: UIButton!
@@ -88,7 +88,8 @@ class AddPlayersViewController: UIViewController, UITextFieldDelegate, UITableVi
             {
                 if let textField = subview as? UITextField
                 {
-                   playAudioFromLabel(textfield: textField)
+                    let speechUtterance = GU_Speech.getSpeechUtterance(text: textField.text!, setting: GU_Speech.SpeechSetting.normal)
+                    synthAV.speak(speechUtterance)
                 }
             }
         }
@@ -97,23 +98,6 @@ class AddPlayersViewController: UIViewController, UITextFieldDelegate, UITableVi
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
-    }
-    
-    @IBAction func playAudioFromLabel(textfield: UITextField){
-        if let text = textfield.text{
-            let speechUtterance = AVSpeechUtterance(string: text)
-            speechUtterance.voice = AVSpeechSynthesisVoice(language: "de-DE")
-            
-            speechUtterance.rate = 0.5
-            speechUtterance.pitchMultiplier = 1.15
-            
-            //speechUtterance.volume //probably uses system volume
-            
-            //speechUtterance.voice = AVSpeechSynthesisVoice(identifier: "")
-            
-            synthAV = AVSpeechSynthesizer()
-            synthAV!.speak(speechUtterance)
-        }
     }
     
     func setDataSourceFromCells(){
