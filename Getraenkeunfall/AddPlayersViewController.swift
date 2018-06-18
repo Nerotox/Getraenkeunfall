@@ -117,11 +117,11 @@ class AddPlayersViewController: UIViewController, UITextFieldDelegate, UITableVi
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is GameScreenViewController {
-            let dest = segue.destination as? GameScreenViewController
+        if segue.destination is PlayModeViewController {
+            let dest = segue.destination as? PlayModeViewController
             dest?.rules = rules
             prepPlayerNames()
-            dest?.players = playerNames
+            dest?.playerNames = playerNames
         }
     }
     

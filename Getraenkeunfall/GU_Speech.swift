@@ -31,5 +31,23 @@ class GU_Speech{
         }
         return speechUtterance
     }
+    
+    static func getSpeechUtterance(text: String, setting: SpeechSetting, preUtteranceDelay: TimeInterval) -> AVSpeechUtterance{
+        let speechUtterance = AVSpeechUtterance(string: text)
+        speechUtterance.voice = AVSpeechSynthesisVoice(language: "de-DE")
+        
+        speechUtterance.preUtteranceDelay = preUtteranceDelay
+        if setting == SpeechSetting.lowPitched {
+            speechUtterance.rate = 0.5
+            speechUtterance.pitchMultiplier = 0.8
+        }else if setting == SpeechSetting.normal{
+            speechUtterance.rate = 0.5
+            speechUtterance.pitchMultiplier = 1.15
+        }else if setting == SpeechSetting.highPitched {
+            speechUtterance.rate = 0.5
+            speechUtterance.pitchMultiplier = 2.0
+        }
+        return speechUtterance
+    }
 }
 
