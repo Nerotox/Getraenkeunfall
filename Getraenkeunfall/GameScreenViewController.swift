@@ -16,24 +16,35 @@ class GameScreenViewController: UIViewController {
     var roleGamesCurrentlyInPlay: Dictionary<String, Int> = [:]
     var roleGamesSolutionInPlay: Dictionary<String, String> = [:]
     let synthAV = AVSpeechSynthesizer()
+    var fullRules: Rules?
+    let defaults = UserDefaults.standard
     
+    @IBOutlet weak var voiceButton: UIButton!
     @IBOutlet weak var ruleLabel: UILabel!
     @IBOutlet var gameView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if defaults.string(forKey: "voice") != nil {
+            defaults.set("enabled", forKey: "voice")
+        }
+        fullRules = rules
         let gesture = UITapGestureRecognizer(target: self, action:  #selector(self.nextRule))
         self.gameView.addGestureRecognizer(gesture)
         ruleLabel.text = getNextRule()
-        let speechUtterance = GU_Speech.getSpeechUtterance(text: ruleLabel.text!, setting: GU_Speech.SpeechSetting.normal)
-        synthAV.speak(speechUtterance)
+        if defaults.string(forKey: "voice") == "enabled" {
+            let speechUtterance = GU_Speech.getSpeechUtterance(text: ruleLabel.text!, setting:  GU_Speech.SpeechSetting.normal)
+            synthAV.speak(speechUtterance)
+        }
     }
     
     @objc func nextRule(sender : UITapGestureRecognizer) {
         ruleLabel.text = getNextRule()
-        synthAV.pauseSpeaking(at: AVSpeechBoundary.immediate)
-        let speechUtterance = GU_Speech.getSpeechUtterance(text: ruleLabel.text!, setting: GU_Speech.SpeechSetting.normal)
-        synthAV.speak(speechUtterance)
+        synthAV.stopSpeaking(at: AVSpeechBoundary.immediate)
+        if defaults.string(forKey: "voice") == "enabled" {
+            let speechUtterance = GU_Speech.getSpeechUtterance(text: ruleLabel.text!, setting: GU_Speech.SpeechSetting.normal)
+            synthAV.speak(speechUtterance)
+        }
     }
     
     func getNextRule() -> String {
@@ -49,6 +60,9 @@ class GameScreenViewController: UIViewController {
         let random = arc4random_uniform(8) + 1;
         switch random {
         case 1,2,3,4:
+            if rules!.rulesGeneral.values.count == 0 {
+                rules!.rulesGeneral = fullRules!.rulesGeneral
+            }
             let rndRuleNumber = arc4random_uniform(UInt32(rules!.rulesGeneral.values.count))
             let key = Array(rules!.rulesGeneral.keys)[Int(rndRuleNumber)]
             let ruleString = rules!.rulesGeneral[key]
@@ -65,7 +79,6 @@ class GameScreenViewController: UIViewController {
                 } else {
                     return getOnePlayerRule()
                 }
-                
             case 6:
                 if (players?.count)! >= 4 {
                     return getThreePlayerRule()
@@ -104,6 +117,19 @@ class GameScreenViewController: UIViewController {
         }
         
         return "test2"
+    }
+    
+    @IBAction func voiceButtonClicked(_ sender: Any) {
+        if voiceButton.image(for: .normal) == #imageLiteral(resourceName: "unmutedWhite") {
+            voiceButton.setImage(#imageLiteral(resourceName: "mutedWhite"), for: .normal)
+            synthAV.stopSpeaking(at: AVSpeechBoundary.immediate)
+            defaults.set("disabled", forKey: "voice")
+        } else {
+            voiceButton.setImage(#imageLiteral(resourceName: "unmutedWhite"), for: .normal)
+            let speechUtterance = GU_Speech.getSpeechUtterance(text: ruleLabel.text!, setting: GU_Speech.SpeechSetting.normal)
+            synthAV.speak(speechUtterance)
+            defaults.set("enabled", forKey: "voice")
+        }
     }
     
     func getPlayableRule(rule:String) -> String {
@@ -231,6 +257,10 @@ class GameScreenViewController: UIViewController {
     }
     
     func getOnePlayerRuleGame() -> String {
+        if rules!.onePlayerRuleGameRule.values.count == 0 {
+            rules!.onePlayerRuleGameRule = fullRules!.onePlayerRuleGameRule
+            rules!.onePlayerRuleGameResolve = fullRules!.onePlayerRuleGameResolve
+        }
         let rndRuleNumber = arc4random_uniform(UInt32(rules!.twoPlayerRuleGameRule.values.count))
         let key = Array(rules!.onePlayerRuleGameRule.keys)[Int(rndRuleNumber)]
         roleGamesCurrentlyInPlay[key] = Int(arc4random_uniform(7)) + 4;
@@ -243,6 +273,10 @@ class GameScreenViewController: UIViewController {
     }
     
     func getTwoPlayerRuleGame() -> String {
+        if rules!.twoPlayerRuleGameRule.values.count == 0 {
+            rules!.twoPlayerRuleGameRule = fullRules!.twoPlayerRuleGameRule
+            rules!.twoPlayerRuleGameResolve = fullRules!.twoPlayerRuleGameResolve
+        }
         let rndRuleNumber = arc4random_uniform(UInt32(rules!.twoPlayerRuleGameRule.values.count))
         let key = Array(rules!.twoPlayerRuleGameRule.keys)[Int(rndRuleNumber)]
         roleGamesCurrentlyInPlay[key] = Int(arc4random_uniform(7)) + 4;
@@ -255,6 +289,10 @@ class GameScreenViewController: UIViewController {
     }
     
     func getThreePlayerRuleGame() -> String {
+        if rules!.threePlayerRuleGameRule.values.count == 0 {
+            rules!.threePlayerRuleGameRule = fullRules!.threePlayerRuleGameRule
+            rules!.threePlayerRuleGameResolve = fullRules!.threePlayerRuleGameResolve
+        }
         let rndRuleNumber = arc4random_uniform(UInt32(rules!.threePlayerRuleGameRule.values.count))
         let key = Array(rules!.threePlayerRuleGameRule.keys)[Int(rndRuleNumber)]
         roleGamesCurrentlyInPlay[key] = Int(arc4random_uniform(7)) + 4;
@@ -268,6 +306,9 @@ class GameScreenViewController: UIViewController {
     }
     
     func getOnePlayerRule() -> String {
+        if rules!.onePlayerGame.values.count == 0 {
+            rules!.onePlayerGame = fullRules!.onePlayerGame
+        }
         let rndRuleNumber = arc4random_uniform(UInt32(rules!.onePlayerGame.values.count))
         let key = Array(rules!.onePlayerGame.keys)[Int(rndRuleNumber)]
         let ruleString = rules!.onePlayerGame[key]
@@ -276,6 +317,9 @@ class GameScreenViewController: UIViewController {
     }
     
     func getTwoPlayerRule() -> String {
+        if rules!.twoPlayerGame.values.count == 0 {
+            rules!.twoPlayerGame = fullRules!.twoPlayerGame
+        }
         let rndRuleNumber = arc4random_uniform(UInt32(rules!.twoPlayerGame.values.count))
         let key = Array(rules!.twoPlayerGame.keys)[Int(rndRuleNumber)]
         let ruleString = rules!.twoPlayerGame[key]
@@ -284,6 +328,9 @@ class GameScreenViewController: UIViewController {
     }
     
     func getThreePlayerRule() -> String {
+        if rules!.threePlayerGame.values.count == 0 {
+            rules!.threePlayerGame = fullRules!.threePlayerGame
+        }
         let rndRuleNumber = arc4random_uniform(UInt32(rules!.threePlayerGame.values.count))
         let key = Array(rules!.threePlayerGame.keys)[Int(rndRuleNumber)]
         let ruleString = rules!.threePlayerGame[key]

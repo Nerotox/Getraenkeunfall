@@ -78,7 +78,7 @@ class HomeViewController: UIViewController {
                         if !String(splittedRule[1]).starts(with: "#") {
                             rules!.threePlayerGame[String(splittedRule[0])] = String(splittedRule[1])
                         }
-                    case "G":
+                    case "R":
                         var splittedRule = lin.split(separator: ";")
                         if !String(splittedRule[1]).starts(with: "#") {
                             rules!.threePlayerRuleGameRule[String(splittedRule[0])] = String(splittedRule[1])
