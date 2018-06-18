@@ -20,7 +20,7 @@
 		853C9B9720CD903300BCC2CD /* AddPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C9B9620CD903300BCC2CD /* AddPlayersViewController.swift */; };
 		853C9B9B20CDAD6900BCC2CD /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C9B9A20CDAD6900BCC2CD /* Rules.swift */; };
 		853C9B9D20D1291F00BCC2CD /* GameScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C9B9C20D1291F00BCC2CD /* GameScreenViewController.swift */; };
-		9573F99B20D32D1B003E4A17 /* Getraenkeunfall_Rules.csv in Resources */ = {isa = PBXBuildFile; fileRef = 9573F99A20D32D1B003E4A17 /* Getraenkeunfall_Rules.csv */; };
+		953920F620D833370064DC83 /* Getraenkeunfall_Rules.csv in Resources */ = {isa = PBXBuildFile; fileRef = 953920F520D833370064DC83 /* Getraenkeunfall_Rules.csv */; };
 		9573F99D20D3337B003E4A17 /* GU_Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9573F99C20D3337B003E4A17 /* GU_Speech.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +61,7 @@
 		853C9B9620CD903300BCC2CD /* AddPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayersViewController.swift; sourceTree = "<group>"; };
 		853C9B9A20CDAD6900BCC2CD /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
 		853C9B9C20D1291F00BCC2CD /* GameScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreenViewController.swift; sourceTree = "<group>"; };
-		9573F99A20D32D1B003E4A17 /* Getraenkeunfall_Rules.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Getraenkeunfall_Rules.csv; path = ../../../../Downloads/Getraenkeunfall_Rules.csv; sourceTree = "<group>"; };
+		953920F520D833370064DC83 /* Getraenkeunfall_Rules.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Getraenkeunfall_Rules.csv; sourceTree = "<group>"; };
 		9573F99C20D3337B003E4A17 /* GU_Speech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GU_Speech.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,7 +123,7 @@
 				9573F99C20D3337B003E4A17 /* GU_Speech.swift */,
 				853C9B9420CD6FFA00BCC2CD /* Main.storyboard */,
 				853C9B6720CD59C900BCC2CD /* LaunchScreen.storyboard */,
-				9573F99A20D32D1B003E4A17 /* Getraenkeunfall_Rules.csv */,
+				953920F520D833370064DC83 /* Getraenkeunfall_Rules.csv */,
 				853C9B6520CD59C900BCC2CD /* Assets.xcassets */,
 				853C9B6A20CD59C900BCC2CD /* Info.plist */,
 				853C9B6220CD59C700BCC2CD /* Getraenkeunfall.xcdatamodeld */,
@@ -254,7 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				853C9B6920CD59C900BCC2CD /* LaunchScreen.storyboard in Resources */,
-				9573F99B20D32D1B003E4A17 /* Getraenkeunfall_Rules.csv in Resources */,
+				953920F620D833370064DC83 /* Getraenkeunfall_Rules.csv in Resources */,
 				853C9B6620CD59C900BCC2CD /* Assets.xcassets in Resources */,
 				853C9B9520CD6FFA00BCC2CD /* Main.storyboard in Resources */,
 			);

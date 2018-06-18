@@ -1,0 +1,146 @@
+#G;#general;
+G1;Alexa dankt. Mein Besitzer oder meine Besitzerin trinkt {sipString}.;
+G2;Der Spieler oder die Spielerin die zuletzt auf dem Klo war trinkt {sipString}.;
+G3;Der Spieler oder die Spielerin dessen Glas am vollsten ist trinkt {sipString}.;
+G4;Es gibt Hartz 4 Zuschlag. Wer weniger als 30€ dabei hat trinkt {sipString}.;
+G5;Der oder die älteste ist ein gutes Vorbild und trinkt {sipString}.;
+G6;Getränkeunfall. Alle trinken {sipString}.;
+G7;Ozapft is! Alle Spieler oder Spielerinnen die gerade Bier trinken, trinken {sipString}.;
+G8;Hey BWL Justus, entspann dich mal! Alle Spieler oder Spielerinnen die mehr als 150€ dabei haben, trinken {sipString}.;
+G9;Nur noch Gucci! Alle die ein Designer Kleidungsstück tragen, trinken {sipString}.;
+G10;Alle Spieler oder Spielerinnen mit Brüsten trinken {sipString}. Ja, auch die Männer.;
+G11;Einzelkinder haben nicht nur Vorteile. Alle Einzelkinder trinken jetzt {sipString}.;
+G12;Achtung Smombie Alarm! Alle Spieler die gerade ihr Handy in der Hand haben trinken {sipString} und legen es weg.;
+G13;Bitte ehrlich sein! Jeder der schon mal im Puff war trinkt {sipString}.;
+G14;Puh. Chillt kurz. Mir fällt gerade nichts ein. Jeder trinkt einfach mal einen Schluck.;
+G15;Jeder der heute zum ersten Mal Getränkeunfall spielt trinkt {sipString} und empfiehlt es hoffentlich weiter.;
+G16;Swag! Alle die Schmuck tragen trinken {sipString}.;
+G17;Hey, wir woll'n die Eisbären sehn! Jeder der gerne Aprés Ski feiert trinkt {sipString}.;
+G18;Was soll denn das? Ich heiße gar nicht Alexa sondern Hans. Der oder diejenige die mich gerade aktiviert hat trinkt {sipString}.;
+G19;Ganz schön stumpf. Wer zuletzt mit seinem Kopf den Tisch berührt trinkt {sipString}.;
+G20;Jetzt sofort schnipsen! Wer am spätesten war oder nicht schnipsen kann trinkt {sipString}.;
+G21;Achtung Serienjunkies! Jeder der heute schon eine Folge einer Serie geschaut hat trinkt {sipString}.;
+G22;Oh, der Apfel ist schon angebissen. Alle IPhone Besitzer trinken {sipString}.;
+G23;Ho di hodi ho di ho! Alle die gerne Schlager hören trinken {sipString}.;
+G24;Achtung heiß und fettig! Alle die heute schon Fast Food gegessen haben trinken {sipString}.;
+G25;Ich schmeiß die Fuffies durch den Club und schrei Bo, Bo! Alle die beim letzten mal Feiern zu viel Geld ausgeben haben trinken {sipString}.;
+G26;Sheesh. Alle die gerne Shisha rauchen trinken {sipString}.;
+G27;Pause für die Lunge. Jetzt ist die Leber dran. Alle Raucher trinken {sipString}.;
+G28;Natürlich nur zum Teelichter anzünden. Alle Spieler die ein Feuerzeug dabei haben trinken {sipString}.;
+G29;Und die Frisur sitzt. Alle Spieler mit Gel oder Wachs in den Haaren trinken {sipString}.;
+G30;Hipster oder Maulwurf? Alle die eine Brille tragen trinken {sipString}.;
+G31;Fashionkiller? Alle die Ripped Jeans tragen oder einfach Löcher in der Hose haben trinken {sipString}.;
+G32;Gute Genetik. Alle Spieler oder Spielerinnen mit blauen Augen trinken {sipString}.;
+G33;Minderheiten werden hier sicher nicht unterdrückt! Wenn mehr Männer als Frauen im Raum sind trinken die Männer jeweils {sipString}, wenn mehr Frauen im Raum sind trinken sie jeweils {sipString}.;
+G34;Ist das dein ernst? Trinke {sipString}, wenn du mit deinem Ex oder deiner Ex immer noch befreundet bist.;
+G35;Gott ist nicht erfreut. Alle Atheisten trinken {sipString}.;
+G36;Darf ich den streicheln? Alle die ein Haustier haben trinken pro Haustier {sipString}.;
+G37;Wo ist Christiano Ronaldo? Alle Fußballspieler oder Fußballspielerinnen trinken {sipString}.;
+G38;Sprit ist teuer, deshalb muss getankt werden. Der oder die mit der längsten Anreise trinkt {sipString}.;
+G39;Das soll nicht erniedrigend wirken. Alle, die keine Alexa besitzen trinken {sipString}.;
+G40;Hoffentlich läuft gerade alles gut. Alle die in einer Beziehung sind trinken {sipString}.;
+G41;Hast du keine Taschen? Alle Spieler oder Spielerinnen deren Handy am Tisch liegt müssen jeweils {sipString} trinken.;
+G42;Arbeitslos, aber die Eltern sind stolz. Alle Studenten und Studentinnen trinken jeweils {sipString}.;
+G43;Auf ewig im Hotel Mama. Alle die noch zuhause wohnen trinken jeweils {sipString}.;
+G44;Getränkeunfall ist erst der Anfang vom Ende. Alle die heute noch in eine Disco oder auf eine Party gehen trinken {sipString}.;
+G45;Glücksspiele ohne Glück. Alle die bei ihrem letzten Casinobesuch Verlust gemacht haben trinken {sipString}.;
+G46;Das geht an die Hobbits aus dem Auenland! Alle Spieler oder Spielerinnnen die kleiner als einen Meter siebzig sind trinken {sipString}.;
+G47;Ein edler Tropfen. Alle die gerade Wein trinken, trinken {sipString}.;
+G48;Na, wenn das so ist kann man ruhig nochmal trinken. Alle die sich morgen ausschlafen können trinken {sipString}.;
+G49;Kann mal passieren. Alle die mindestens ein Mal beim Führerschein durchgefallen sind trinken {sipString}.;
+G50;Aua aua aua im Kopf. Alle die am Tag nach dem Trinken immer überdurchschnittlich durch Restalkohol beeinträchtigt sind trinken {sipString}.;
+G51;Schlüssel, Deko oder Werkzeug am Schlüsselbund? Alle die 5 oder mehr Dinge am Schlüsselbund haben trinken {sipString}.;
+G52;Rachhe des Lauches! Der lauchigste Spieler darf {distrAmount} verteilen.;
+G53;Mühen werden belohnt. Der Spieler der bis jetzt am meisten getrunken hat darf {distrAmount} verteilen.;
+G54;Gingers do have souls! Rothaarige Spieler oder Spielerinnen dürfen {distrAmount} verteilen.;
+G55;Disco-Pumper aufgepasst! Der Spieler mit dem dicksten Bizeps darf {distrAmount} verteilen.;
+G56;Man's not hot. Alle die eine Jacke tragen dürfen {distrAmount} verteilen.;
+G57;Happy Birthday! Alle Spieler die in den letzten 30 Tagen Geburtstag gehabt haben dürfen {distrAmount} verteilen.;
+G58;Da kann man ruhig mal klatschen. Der Spieler der als erster sein Glas austrinkt darf {distrAmount} verteilen.;
+G59;Alle die einen Stift dabei haben dürfen {distrAmount} verteilen. Falls niemand einen Stift dabei hat trinken alle {distrAmount}.;
+G60;Ich wünsche euch einen braven Wecker. Alle die morgen früh aufstehen müssen dürfen {distrAmount} verteilen.;
+G61;Wer ist der beste Tänzer? Stimmt ab. Der Tänzer oder die Tänzerin trinkt {sipString} und muss seinen Special Move herzeigen.;
+G62;Wer verträgt am meisten? Stimmt ab. Der oder die Trinkfeste trinkt zum Beweis der Theorie {sipString}.;
+G63;Wer hat den schlechtesten Musikgeschmack? Stimmt ab. Der gewählte Spieler oder die gewählte Spielerin trinkt {sipString} und legt heute hoffentlich nicht mehr auf.;
+G64;Es muss aufgeholt werden. Stimmt ab wer am nüchternsten ist. Der gewählte Spieler trinkt {sipString}.;
+G65;Wer wird der nächste Millionär? Stimmt ab. Bill Gates 2.0 trinkt {sipString} und finanziert in Zukunft hoffentlich die nächsten Abende.;
+G66;Stimmt ab wer von euch der größte Raser ist und prinzipiell überall zu schnell fährt! Michael oder Michaela Schuhmacher trinkt {sipString} und fährt heute hoffentlich nicht mehr mit dem Auto.;
+G67;Noch Hipster oder schon Zauberer? Alle Bartträger trinken {sipString}.;
+G68;Hoffentlich wurde kein Screenshot gemacht. Alle die heute schon einen Snap verschickt haben trinken jeweils {sipString}.;
+G69;Sicher nur Spam. Alle die ihre Mails heute noch nicht gecheckt haben trinken {sipString}.;
+G70;Die Devise lautet Hodl. Alle die Coins einer Kryptowährung besitzen trinken {sipString}.;
+G71;Mr. Oder Mrs. Worldwide? Alle die mehr als eine Fremdsprache sprechen dürfen jeweils {distrAmount} verteilen.;
+G72;Benutzt das überhaupt noch jemand?. Alle die in den letzten 30 Tagen eine SMS verschickt haben trinken {sipString}.;
+G73;Hello! Bonjour! Hola! Alle die Verwandschaft in einem anderen Land haben trinken {sipString}.;
+G74;Das ist ja noch fast voll! Alle Spieler die noch mehr als die Hälfte im Glas haben trinken {sipString}.;
+G75;Immer am Schafe zählen. Alle die schon mal beim Job oder in der Schule eingeschlafen sind trinken {sipString}.;
+G76;Hey DJ! Der Spieler der gerade für die Musik zuständig ist trinkt {sipString}.;
+G77;Hoffentlich ist das, das erste Mal, dass du dein Tattoo bereust. Alle Tätowierten trinken jeweils {sipString}.;
+G78;Wer war der Stecher? Alle die Ohrringe tragen, oder ein Piercing haben trinken {sipString}.;
+G79;Damit die Hose sitzt. Alle die einen Gürtel tragen trinken {sipString}.;
+G80;Immer top vorbereitet für eine Runde Getränkeunfall. Alle die einen Bieröffner am Schlüsselbund haben dürfen {distrAmount} verteilen.;
+G81;Limonade ist der natürliche Feind von Bier. Alle die in den letzten 30 Tagen einen Radler getrunken haben trinken {sipString}.;
+G82;Der morgendliche Zaubertrank soll in Maßen genossen werden. Alle die heute schon mehr als 3 Tassen Kaffee getrunken haben trinken {sipString}.;
+G83;Ziemlich nützlich und weit verbreitet. Alle die beim Web surfen einen Ad-Blocker benutzen trinken {sipString}.;
+#1P;#oneplayer;
+1P1;Hey {p4}! Du siehst müde aus. Trink doch mal {sipString}.;
+1P2;Hallo {p1}! Lese deine letzte geschriebene Whatsapp Nachricht vor und verteile {distrAmount}.;
+1P3;Hey {p1}. Ich möchte den Refrain deines Lieblingsliedes hören! Singe und verteile {distrAmount} oder trink sie selbst.;
+1P4;Yo {p1}. Heute ist dein Glückstag. Verteil {distrAmount} oder trink sie selber wenn du recht durstig bist.;
+1P5;Ich hoffe dir ist nocht nicht schlecht {p1}! Drehe dich 10 mal im Uhrzeigersinn und verteile {distrAmount} oder trink sie selber.;
+1P6;Ding Ding Ding. Zeit für einen Toast! {p1} bestimmt auf was getrunken wird! Alle trinken {sipString}.;
+1P7;Hey {p1}! Wenn du letztens Wochenende nach dem Feiern erst nach 4 Uhr zuhause warst darfst du {distrAmount} verteilen. Trinke sonst {sipString}.;
+1P8;Oh Mann ist {p1} alt. Alle die jünger sind trinken {sipString}. Falls niemand jünger ist trinkt {p1} {sipString}.;
+1P9;Zeit für Hobby-Leichatlethik. {p1}, mache einen Purzelbaum und verteile {distrAmount} oder trinke {sipString}.;
+1P10;Wirf eine Münze {p1}. Wenn du die Seite richtig errätst darfst du {distrAmount} verteilen. Trinke sonst {sipString}.;
+1P11;Hey {p1}! Schau dich um und wähle ein Opfer. Das Opfer muss {sipString} trinken.;
+1P12;Hey {p1}! Bitte lächeln! Poste auf Snapchat oder Instagram eine Story vom Spiel und verlinke @getränkeunfall und verteile {distrAmount}.;
+1P13;Hey {p1}. Schau in deine Geldtasche. Wenn du eine 1€ Münze dabei hast, darfst du {distrAmount} verteilen. Wenn nicht trinke {sipString}.;
+1P14;Hey {p1}! Erzähle einen Witz. Die anderen entscheiden, ob er gut oder schlecht ist. Ist er gut, darfst du {distrAmount} verteilen. Ansonsten trinkst du selbst {sipString}.;
+1P15;Normalweise sehen die immer ziemlich schlimm aus. {p1}, zeig dein Führerscheinfoto her und trinke {sipString}.;
+#2P;#twoplayer;
+2P1;Hey {p1}! Das könnte jetzt peinlich werden. Wie alt ist {p2}? Wenn du richtig liegst darfst du {sipString} verteilen sonst darfst du dich schämen und {sipString} selbst trinken.;
+2P2;Höhere Gewinnchance als beim Lotto. {p1}, rate welche Schuhgröße {p2} hat. Wenn du richtig liegst darfst du {sipString} verteilen, sonst musst du {sipString} selbst trinken.;
+2P3;Nicht spicken! {p1}, welche Farbe haben die Socken von {p2}? Wenn du wenn du richtig liegst darfst du {distrAmount} verteilen, sonst musst du {sipString} selbst trinken.;
+2P4;Yo {p1}! Du darfst das nächste Getränk von {p2} bestimmen. Zusätzlich trinkt {p2} {sipString} um dem neuen Getränk näher zu kommen.;
+2P5;Hey {p1}! Hat {p2} einen zweiten Vornamen? Wenn ja, wie lautet dieser? Wenn du es weißt darfst du {distrAmount} verteilen. Wenn nicht, trinke {sipString}.;
+2P6;{p1} und {p2} spielen eine Runde Schere, Stein, Papier. Der Verlierer trinkt {sipString}, der Gewinner darf {distrAmount} verteilen.;
+2P7;Egal was andere sagen, Größe ist wichtig! {p1} und {p2} stellen sich nebeneinander. Der oder die Kleinere trinkt {sipString}.;
+2P8;Prost! {p1} und {p2} stoßen an und trinken jeweils {sipString}.;
+2P9;Reise nach Jerusalem! Oder doch nicht. Viel zu aufwendig. {p1} und {p2} tauschen einfach ihre Plätze und trinken {sipString}.;
+2P10;Übermäßiger Alkoholkonsum ist nicht zu empfehlen. Aber {p1} und {p2} sehen noch ziemlich fit aus. Trinkt jeweils {sipString}.;
+2P11;Alles fit? Zeit für ein bisschen Sport. {p1} und {p2} machen Liegestütze. Wer zuerst 10 Stück schafft darf {distrAmount} verteilen und der Verlierer trinkt {sipString}.;
+2P12;Let's get ready to rumble! Zeit für eine Daumenwrestlingpartie zwischen {p1} und {p2}. Der Gewinner darf {distrAmount} verteilen und der Verlierer trinkt {sipString}.;
+2P13;Neues Spiel für {p1} und {p2}. Vergleicht die Größe eurer Hände. Der Verlierer oder die Verliererin trinkt {sipString}.;
+2P14;Yo {p1} und {p2}. Wessen Glas ist voller? Der oder die mit mehr im Glas trinkt {sipString}, der oder die andere darf {distrAmount} verteilen.;
+2P15;Hey {p1} und {p2}! Wenn ihr schon einmal in einem Tanzkurs wart, dürft ihr jeweils {distrAmount} verteilen. Wenn nicht trinkt ihr jeweils selbst {sipString}.;
+2P16;{p1} und {p2} sehen wie wahre Whiskey-Kenner aus! Wenn ihr Whisky mögt dürft ihr jeweils {distrAmount} verteilen. Wenn nicht trinkt jeweils {sipString}.;
+2P17;Spiel für {p1} und {p2}. Berührt mich! Also das Alexa Gerät. Wer schneller ist darf {distrAmount} verteilen. Der oder die langsamere trinkt {sipString}.;
+2P18;Das wird bestimmt niemand bemerken. {p1}, ändere deinen Whatapp-Status für 24h auf den Wunsch von {p2} und trinke {sipString}.;
+2P19;Lass mal kosten! {p1} trinkt {sipString} aus dem Glas von {p2}.;
+2P19;Das könnte man ruhig wissen. Wie lautet deine Handynummer {p1}? Wenn du sie auswendig weißt, darfst du {distrAmount} verteilen. Trinke sonst {sipString}.;
+#3P;#threeplayer;
+3P1;Ich hoffe ihr seid heute gut vorbereitet. {p1}, {p2} und {p3} holt eure Handys heraus. Der oder die mit dem meisten Akku gewinnt. Die Verlierer trinken jeweils {sipString}.;
+3P2;Man sollte viel trinken um nicht zu dehydrieren! Nehmt euch das zu Herzen {p1}, {p2} und {p3} und trinkt {sipString}.;
+3P3;Polizeikontrolle! {p1}, {p2} und {p3} stellt euch auf ein Bein und berührt eure Nase mit eurem Zeigefinger. Wiederholt das ganze 5 mal. Jeder der es schafft darf {distrAmount} verteilen. Wer es nicht schafft trinkt {sipString}.;
+3P4;Ta tü tata! Die Feuerwehr ist da. Ich habe gehört es muss Durst gelöscht werden. {p1}, {p2} und {p3} trinken {sipString}.;
+3P5;Zeit für ein Spiel für {p1}, {p2} und {p3}. Trinkt einen Schluck ohne euer Glas mit den Händen zu berühren. Der oder die Langsamste trinkt zusätzlich {sipString}.;
+3P6;Zeit für ein Spiel für {p1}, {p2} und {p3}. Stellt euch auf euren Stuhl. Der oder die Langsamste trinkt {sipString}.;
+3P7;Zeit für ein Spiel für {p1}, {p2} und {p3}. Berührt eure Zehen mit den Fingern. Wer es schafft darf {distrAmount} verteilen. Wer es nicht schafft trinkt {sipString}.;
+#1RG;#oneplayerrulegames;
+1RG1;Let's get this party started! {p1} ist ab jetzt der DJ und darf solange die Musik bestimmen bis die Regel aufgehoben wird.;Ok {p1}. Reicht wieder. Du bist nicht mehr der DJ.
+1RG2;It's lit! {p1} muss ab jetzt immer den Dab machen bevor er oder sie trinkt, wenn es vergessen wird gibt es einen Strafschluck.;Genug gedabbt {p1}. Du kannst wieder normal trinken.
+1RG3;{p1}, sind deine Beine eingeschlafen? Steh mal auf und bleib solange stehen bis ich es sage.;Die Durchblutung wurde ausreichend angeregt. {p1}, du darfst dich wieder hinsetzen.
+1RG4;{p1} strotzt doch voller Energie! Steh auf und tanze auf der Stelle bis ich dir das Gegenteil sage.;Immer wenn du unterbrichst gibt es einen Strafschluck.|Genug getanzt {p1}. Setz dich wieder hin.
+1RG5;{p1} du Plappermaul! Jetzt reichts mal wieder. Du darfst ab jetzt nur noch reden, wenn du dazu aufgefordert wirst oder etwas gefragt wirst. Einen Strafschluck pro Regelverstoß.;{p1}, du darfst ab jetzt wieder unaufgefordert reden.
+1RG6;Yo {p1}. Such dir deinen Erziehungsberechtigten aus. Immer wenn du trinken müsstest kannst du die Schlücke an deine Verantwortungsperson weitergeben.;{p1} ist endlich volljährig und kann daher keine Schlücke mehr an seinen oder ihren Erziehungsberechtigten weitergeben.
+1RG7;Sofort stehen bleiben {p1} und Hände hoch! Du darfst deine Hände nicht mehr benützen bis die Regel aufgelöst wird. Sei kreativ wenn du trinken musst.;Der Überfall ist vorbei und es ist alles gut gegangen. {p1}, du kannst deine Hände nun runternehmen.
+1RG8;{p1} ist ab jetzt blind uns muss beide Augen schließen. Benutzte deine anderen Sinne um zu trinken.;Ein Wunder ist geschehen! {p1} wurde geheilt und ist nicht mehr blind!
+1RG9;{p1} ist nun die Respektsperson. Er oder sie darf nur noch in der Sie-Form angesprochen werden. Fehler werden mit einem Strafschluck bestraft.;{p1} war unanständig und ist daher nicht länger die Respektsperson. Er oder sie darf wieder normal angesprochen werden.
+1RG10;Shake it! {p1} ist nun der Barkeeper und darf alle Getränke mischen, bis die Regel aufgehoben wird.;Genug gemixt {p1}. Du bist ab jetzt nicht mehr der Barkeeper und jeder mischt seine Getränke wieder selbst.
+#2RG;#twoplayerrulegames;
+2RG1;{p1} und {p2} sind nun ein Paar! Jedes mal wenn einer der beiden trinkt, trinkt der oder die andere die gleiche Anzahl an Schlücken.;Es gab Beziehungsstreit. {p1} und {p2} sind kein Paar mehr und müssen daher nicht mehr miteinander trinken.
+2RG2;{p1} und {p2} sind ab jetzt Kneipenbuddies! Jedes mal bevor ihr trinkt müsst ihr miteinander anstoßen. Trinkt beide einen Strafschluck wenn ihr es vergesst.;Es ist Sperrstunde. Die Kneipe sperrt zu und daher müssen {p1} und {p2} nicht mehr vorm Trinken miteinander anstoßen.
+2RG3;{p1} ist Anführer der Armee und darf sich einen Kampfschrei aussuchen, den {p2} immer rufen muss bevor er oder sie trinkt! Bei Verweigerung gibt es einen Strafschluck.;Der Kampf ist vorbei und {p2} braucht nicht mehr zu schreien bevor er oder sie trinkt.
+#3RG;#threeplayerrulegames;
+3RG1;Zeit für eine Dreiecksbeziehung! {p1}, {p2} und {p3} helfen zusammen und teilen sich ab jetzt alle Schücke untereinander auf. Falls nicht gleichmäßig geteilt werden kann, wird aufgerundet.;Es gab Drama und die Dreiecksbeziehung ist zerbrochen. {p1}, {p2} und {p3} trinken ihre Schlücke wieder jeweils selbst.
