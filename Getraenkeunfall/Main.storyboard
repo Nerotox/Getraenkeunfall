@@ -10,6 +10,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="spacecomics.ttf">
+            <string>SpaceComics</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Starting Screen-->
         <scene sceneID="tne-QT-ifu">
@@ -19,14 +24,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwh-cs-doS">
-                                <rect key="frame" x="66" y="303.5" width="243" height="60"/>
-                                <color key="backgroundColor" red="0.69803921568627447" green="0.070588235294117646" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwh-cs-doS">
+                                <rect key="frame" x="37.5" y="303.5" width="300" height="60"/>
+                                <color key="backgroundColor" red="0.5725490196078431" green="0.19607843137254902" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="0IZ-na-zd6"/>
+                                    <constraint firstAttribute="width" constant="300" id="RyT-t3-0S3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Neues Spiel">
+                                <fontDescription key="fontDescription" name="SpaceComics" family="Space Comics" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="NEUES SPIEL">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -38,28 +45,77 @@
                                     <segue destination="gU7-zz-T3U" kind="show" id="rZw-TS-gQl"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Getränkeunfall" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIv-hM-2Dt">
-                                <rect key="frame" x="16" y="40" width="343" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" red="0.69803921570000005" green="0.070588235289999995" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GETRÄNKEUNFALL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIv-hM-2Dt">
+                                <rect key="frame" x="0.0" y="170" width="375" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="wlR-b8-UMb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SpaceComics" family="Space Comics" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook_icon" translatesAutoresizingMaskIntoConstraints="NO" id="zvD-mI-atb">
+                                <rect key="frame" x="275" y="567" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="c2d-gv-UAk"/>
+                                    <constraint firstAttribute="width" constant="80" id="dp1-qg-GdY"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instagram_icon" translatesAutoresizingMaskIntoConstraints="NO" id="SdY-Vs-bee">
+                                <rect key="frame" x="95" y="567" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="kQ6-Hd-ybM"/>
+                                    <constraint firstAttribute="height" constant="80" id="sa8-1n-JK6"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter_icon" translatesAutoresizingMaskIntoConstraints="NO" id="qmn-6s-mGC">
+                                <rect key="frame" x="185" y="567" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Xng-Oc-TNF"/>
+                                    <constraint firstAttribute="height" constant="80" id="oRO-1z-vwn"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xwt-od-Wrg">
+                                <rect key="frame" x="37" y="383.5" width="300" height="60"/>
+                                <color key="backgroundColor" red="0.57254901960000004" green="0.1960784314" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="S3A-Ff-i3z"/>
+                                    <constraint firstAttribute="width" constant="300" id="gMZ-yr-55Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SpaceComics" family="Space Comics" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="GO PRO">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.99607843139999996" green="0.94901960780000005" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.76470588235294112" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Uwh-cs-doS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7dQ-7j-leO"/>
-                            <constraint firstItem="RIv-hM-2Dt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="E0A-xf-EWb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RIv-hM-2Dt" secondAttribute="trailing" constant="16" id="E11-bn-6yu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uwh-cs-doS" secondAttribute="trailing" constant="66" id="H8G-zn-X5E"/>
-                            <constraint firstItem="Uwh-cs-doS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="66" id="HTL-RN-WUG"/>
-                            <constraint firstItem="RIv-hM-2Dt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="N4G-Lc-IjP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SdY-Vs-bee" secondAttribute="bottom" constant="20" id="8nC-sJ-T8s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zvD-mI-atb" secondAttribute="bottom" constant="20" id="CfZ-Qf-59g"/>
+                            <constraint firstItem="Xwt-od-Wrg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DWX-yQ-iT8"/>
+                            <constraint firstItem="RIv-hM-2Dt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="E0A-xf-EWb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RIv-hM-2Dt" secondAttribute="trailing" id="E11-bn-6yu"/>
+                            <constraint firstItem="Xwt-od-Wrg" firstAttribute="top" secondItem="Uwh-cs-doS" secondAttribute="bottom" constant="20" id="GSC-Yj-hqK"/>
+                            <constraint firstItem="RIv-hM-2Dt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N4G-Lc-IjP"/>
+                            <constraint firstItem="qmn-6s-mGC" firstAttribute="leading" secondItem="SdY-Vs-bee" secondAttribute="trailing" constant="10" id="WoD-DW-YGc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qmn-6s-mGC" secondAttribute="bottom" constant="20" id="ZT2-gz-zau"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zvD-mI-atb" secondAttribute="trailing" constant="20" id="aaZ-jN-n6x"/>
+                            <constraint firstItem="zvD-mI-atb" firstAttribute="leading" secondItem="qmn-6s-mGC" secondAttribute="trailing" constant="10" id="ca9-aP-pF6"/>
+                            <constraint firstItem="Uwh-cs-doS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iNs-16-w1X"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="239" y="116"/>
+            <point key="canvasLocation" x="237.59999999999999" y="115.59220389805098"/>
         </scene>
         <!--Add Players View Controller-->
         <scene sceneID="czd-Ie-OnR">
@@ -69,14 +125,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPG-AC-hqw">
-                                <rect key="frame" x="16" y="594" width="150" height="48"/>
-                                <color key="backgroundColor" red="1" green="0.43529411759999997" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPG-AC-hqw">
+                                <rect key="frame" x="10" y="592" width="170" height="50"/>
+                                <color key="backgroundColor" red="0.5725490196078431" green="0.19607843137254902" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="l57-ly-wER"/>
+                                    <constraint firstAttribute="height" constant="50" id="LiB-L6-i9W"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="amZ-nP-ZZx"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Zurück">
+                                <fontDescription key="fontDescription" name="SpaceComics" family="Space Comics" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="ZURÜCK">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -88,14 +146,16 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="fAS-YS-Pgc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i62-As-TRm">
-                                <rect key="frame" x="209" y="594" width="150" height="48"/>
-                                <color key="backgroundColor" red="1" green="0.43529411759999997" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i62-As-TRm">
+                                <rect key="frame" x="195" y="592" width="170" height="50"/>
+                                <color key="backgroundColor" red="0.5725490196078431" green="0.19607843137254902" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="F0y-po-AQ1"/>
+                                    <constraint firstAttribute="height" constant="50" id="52t-Z1-yl5"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="mui-xl-5Ie"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Weiter">
+                                <fontDescription key="fontDescription" name="SpaceComics" family="Space Comics" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="WEITER">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -107,15 +167,19 @@
                                     <segue destination="5tb-jI-AYF" kind="show" id="fMv-XE-AXB"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spieler hinzufügen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HE-Z0-nsd">
-                                <rect key="frame" x="67.5" y="40" width="240" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPIELER HINZUFÜGEN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HE-Z0-nsd">
+                                <rect key="frame" x="14.5" y="40" width="346" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Fmu-6T-lV2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SpaceComics" family="Space Comics" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zM9-yO-Se1">
-                                <rect key="frame" x="0.0" y="96" width="375" height="348"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="110" width="375" height="332"/>
+                                <color key="backgroundColor" red="1" green="0.76470588240000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="1" green="0.76470588240000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlayerCell" id="vv0-Yz-7KY" customClass="PlayerCell" customModule="Getraenkeunfall" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -126,12 +190,18 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2jy-CK-JNX">
                                                     <rect key="frame" x="40" y="4" width="250" height="35"/>
+                                                    <color key="backgroundColor" red="0.5725490196078431" green="0.19607843137254902" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="CCf-AB-FTd"/>
                                                     </constraints>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="yes" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                            <color key="value" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXR-9y-5CI">
                                                     <rect key="frame" x="300" y="4.5" width="35" height="35"/>
@@ -145,6 +215,7 @@
                                                     </connections>
                                                 </button>
                                             </subviews>
+                                            <color key="backgroundColor" red="1" green="0.76470588240000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="2jy-CK-JNX" firstAttribute="leading" secondItem="WWn-ud-EbB" secondAttribute="leading" constant="40" id="ChT-c6-ZFP"/>
                                                 <constraint firstItem="PXR-9y-5CI" firstAttribute="leading" secondItem="2jy-CK-JNX" secondAttribute="trailing" constant="10" id="LB4-ha-SaH"/>
@@ -153,6 +224,7 @@
                                                 <constraint firstItem="2jy-CK-JNX" firstAttribute="centerY" secondItem="WWn-ud-EbB" secondAttribute="centerY" id="mT2-t7-dTp"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.4941176471" green="0.1176470588" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="playerNameTextField" destination="2jy-CK-JNX" id="84b-hx-xSN"/>
                                             <outlet property="speakerButton" destination="PXR-9y-5CI" id="JzT-vI-Myv"/>
@@ -177,6 +249,7 @@
                                                     </connections>
                                                 </button>
                                             </subviews>
+                                            <color key="backgroundColor" red="1" green="0.76470588240000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="LLa-vt-Bnx" firstAttribute="centerY" secondItem="vhy-62-efZ" secondAttribute="centerY" id="CWL-CI-gG7"/>
                                                 <constraint firstItem="LLa-vt-Bnx" firstAttribute="leading" secondItem="vhy-62-efZ" secondAttribute="leading" constant="40" id="hU4-pg-pGH"/>
@@ -189,13 +262,13 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.76470588235294112" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="3aN-Am-4j3" firstAttribute="bottom" secondItem="IPG-AC-hqw" secondAttribute="bottom" constant="25" id="04x-hD-5Pn"/>
                             <constraint firstItem="3aN-Am-4j3" firstAttribute="trailing" secondItem="zM9-yO-Se1" secondAttribute="trailing" id="4BD-AC-gs1"/>
-                            <constraint firstItem="IPG-AC-hqw" firstAttribute="leading" secondItem="3aN-Am-4j3" secondAttribute="leading" constant="16" id="CU5-bc-Y9T"/>
+                            <constraint firstItem="IPG-AC-hqw" firstAttribute="leading" secondItem="3aN-Am-4j3" secondAttribute="leading" constant="10" id="CU5-bc-Y9T"/>
                             <constraint firstItem="zM9-yO-Se1" firstAttribute="top" secondItem="7HE-Z0-nsd" secondAttribute="bottom" constant="20" id="Duy-Fm-Mxv"/>
-                            <constraint firstItem="3aN-Am-4j3" firstAttribute="trailing" secondItem="i62-As-TRm" secondAttribute="trailing" constant="16" id="JIz-iy-7Y2"/>
+                            <constraint firstItem="3aN-Am-4j3" firstAttribute="trailing" secondItem="i62-As-TRm" secondAttribute="trailing" constant="10" id="JIz-iy-7Y2"/>
                             <constraint firstItem="3aN-Am-4j3" firstAttribute="bottom" secondItem="i62-As-TRm" secondAttribute="bottom" constant="25" id="Qlg-ho-ycg"/>
                             <constraint firstItem="7HE-Z0-nsd" firstAttribute="top" secondItem="3aN-Am-4j3" secondAttribute="top" constant="20" id="Xr8-pr-ePg"/>
                             <constraint firstItem="zM9-yO-Se1" firstAttribute="leading" secondItem="3aN-Am-4j3" secondAttribute="leading" id="cgP-CC-zyi"/>
@@ -239,7 +312,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHp-lT-HvT">
                                 <rect key="frame" x="16" y="270" width="343" height="39.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AuX-Kl-33c">
@@ -263,13 +336,14 @@
                                     <constraint firstAttribute="width" constant="50" id="W63-ST-Tx9"/>
                                     <constraint firstAttribute="width" secondItem="cwg-wP-lDa" secondAttribute="height" multiplier="1:1" id="bmd-i2-NLQ"/>
                                 </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button" image="unmutedWhite"/>
                                 <connections>
                                     <action selector="voiceButtonClicked:" destination="fJl-7a-dkl" eventType="touchUpInside" id="eCO-YC-3Cu"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.76470588240000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="mFU-Uu-3G0" firstAttribute="leading" secondItem="AuX-Kl-33c" secondAttribute="trailing" constant="16" id="1O1-9z-1vu"/>
@@ -303,56 +377,89 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spielmodus wählen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTQ-am-UHx">
-                                <rect key="frame" x="62.5" y="40" width="250.5" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPIELMODUS WÄHLEN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTQ-am-UHx">
+                                <rect key="frame" x="18" y="40" width="340" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="R9Z-Zq-uDk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SpaceComics" family="Space Comics" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Die Spielmodi unterscheiden sich in der Anzahl der zu trinkenden Schlücke." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfF-Dp-Yhp">
-                                <rect key="frame" x="5" y="86" width="365" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Die Spielmodi unterscheiden sich in der Anzahl der zu trinkenden Schlücke." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfF-Dp-Yhp">
+                                <rect key="frame" x="10" y="100" width="355" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="6eY-cH-Uk7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Klr-n4-5EN">
-                                <rect key="frame" x="133" y="306" width="109" height="54"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <state key="normal" title="Normal"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Klr-n4-5EN">
+                                <rect key="frame" x="15" y="303" width="345" height="60"/>
+                                <color key="backgroundColor" red="0.5725490196078431" green="0.19607843137254902" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Fyi-5U-XFE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SpaceComics" family="Space Comics" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="NORMAL">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="fJl-7a-dkl" kind="show" id="Yqc-UZ-Vpw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWA-H1-lKG">
-                                <rect key="frame" x="78" y="400" width="218" height="54"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <state key="normal" title="Getränkeunfall"/>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWA-H1-lKG">
+                                <rect key="frame" x="15" y="403" width="345" height="60"/>
+                                <color key="backgroundColor" red="0.5725490196078431" green="0.19607843137254902" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Vsv-lT-G61"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SpaceComics" family="Space Comics" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="GETRÄNKEUNFALL">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="fJl-7a-dkl" kind="show" id="Hei-bS-gD6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSy-sK-irX">
-                                <rect key="frame" x="140.5" y="212" width="94" height="54"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <state key="normal" title="Chillig"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSy-sK-irX">
+                                <rect key="frame" x="15" y="203" width="345" height="60"/>
+                                <color key="backgroundColor" red="0.5725490196078431" green="0.19607843137254902" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="qnT-19-tnz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SpaceComics" family="Space Comics" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="CHILLIG">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="fJl-7a-dkl" kind="show" id="vGj-Sk-lTY"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.76470588240000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="bfF-Dp-Yhp" firstAttribute="centerX" secondItem="E2w-wd-Dqf" secondAttribute="centerX" id="1U2-yh-SrW"/>
                             <constraint firstItem="BWA-H1-lKG" firstAttribute="top" secondItem="Klr-n4-5EN" secondAttribute="bottom" constant="40" id="1aI-Gf-heQ"/>
                             <constraint firstItem="Klr-n4-5EN" firstAttribute="centerX" secondItem="E2w-wd-Dqf" secondAttribute="centerX" id="2ED-kA-A77"/>
+                            <constraint firstItem="Klr-n4-5EN" firstAttribute="leading" secondItem="BVH-gE-sbs" secondAttribute="leading" constant="15" id="6CE-3J-zxR"/>
+                            <constraint firstItem="BVH-gE-sbs" firstAttribute="trailing" secondItem="JSy-sK-irX" secondAttribute="trailing" constant="15" id="7YS-20-Ywg"/>
                             <constraint firstItem="Klr-n4-5EN" firstAttribute="top" secondItem="JSy-sK-irX" secondAttribute="bottom" constant="40" id="BDa-pK-R4W"/>
                             <constraint firstItem="JSy-sK-irX" firstAttribute="centerX" secondItem="E2w-wd-Dqf" secondAttribute="centerX" id="HCc-Yw-cb2"/>
                             <constraint firstItem="WTQ-am-UHx" firstAttribute="centerX" secondItem="E2w-wd-Dqf" secondAttribute="centerX" id="NeJ-0A-Xn0"/>
-                            <constraint firstItem="bfF-Dp-Yhp" firstAttribute="leading" secondItem="E2w-wd-Dqf" secondAttribute="leading" constant="5" id="Snh-df-DZm"/>
+                            <constraint firstItem="bfF-Dp-Yhp" firstAttribute="leading" secondItem="E2w-wd-Dqf" secondAttribute="leading" constant="10" id="Snh-df-DZm"/>
+                            <constraint firstItem="JSy-sK-irX" firstAttribute="leading" secondItem="BVH-gE-sbs" secondAttribute="leading" constant="15" id="a2D-S8-yOy"/>
                             <constraint firstItem="WTQ-am-UHx" firstAttribute="top" secondItem="BVH-gE-sbs" secondAttribute="top" constant="20" id="dst-bx-DQf"/>
-                            <constraint firstAttribute="trailing" secondItem="bfF-Dp-Yhp" secondAttribute="trailing" constant="5" id="iVA-lj-GJp"/>
+                            <constraint firstAttribute="trailing" secondItem="bfF-Dp-Yhp" secondAttribute="trailing" constant="10" id="iVA-lj-GJp"/>
                             <constraint firstItem="Klr-n4-5EN" firstAttribute="centerY" secondItem="E2w-wd-Dqf" secondAttribute="centerY" id="lRb-19-jQl"/>
+                            <constraint firstItem="BVH-gE-sbs" firstAttribute="trailing" secondItem="BWA-H1-lKG" secondAttribute="trailing" constant="15" id="lV8-hp-6Kz"/>
+                            <constraint firstItem="BVH-gE-sbs" firstAttribute="trailing" secondItem="Klr-n4-5EN" secondAttribute="trailing" constant="15" id="rjP-Na-ns0"/>
                             <constraint firstItem="BWA-H1-lKG" firstAttribute="centerX" secondItem="E2w-wd-Dqf" secondAttribute="centerX" id="tVO-6P-Qp4"/>
+                            <constraint firstItem="BWA-H1-lKG" firstAttribute="leading" secondItem="BVH-gE-sbs" secondAttribute="leading" constant="15" id="tZf-Fb-z2P"/>
                             <constraint firstItem="bfF-Dp-Yhp" firstAttribute="top" secondItem="WTQ-am-UHx" secondAttribute="bottom" constant="10" id="xsS-Wd-S0q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BVH-gE-sbs"/>
@@ -367,12 +474,15 @@
         <image name="Settings" width="50" height="50"/>
         <image name="Speaker" width="750" height="750"/>
         <image name="addPlayers" width="50" height="50"/>
+        <image name="facebook_icon" width="1024" height="1024"/>
+        <image name="instagram_icon" width="1000" height="1000"/>
         <image name="plus" width="512" height="512"/>
+        <image name="twitter_icon" width="512" height="512"/>
         <image name="unmutedWhite" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Hei-bS-gD6"/>
-        <segue reference="rZw-TS-gQl"/>
+        <segue reference="ytL-n8-DN2"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.078431372549019607" green="0.63137254901960782" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -24,7 +24,7 @@ class GU_Speech{
             speechUtterance.pitchMultiplier = 0.8
         }else if setting == SpeechSetting.normal{
             speechUtterance.rate = 0.5
-            speechUtterance.pitchMultiplier = 1.15
+            speechUtterance.pitchMultiplier = 1.0
         }else if setting == SpeechSetting.highPitched {
             speechUtterance.rate = 0.5
             speechUtterance.pitchMultiplier = 2.0

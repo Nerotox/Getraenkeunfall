@@ -19,6 +19,7 @@
 		853C9B9720CD903300BCC2CD /* AddPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C9B9620CD903300BCC2CD /* AddPlayersViewController.swift */; };
 		853C9B9B20CDAD6900BCC2CD /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C9B9A20CDAD6900BCC2CD /* Rules.swift */; };
 		853C9B9D20D1291F00BCC2CD /* GameScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C9B9C20D1291F00BCC2CD /* GameScreenViewController.swift */; };
+		9519D4DB20D88A2900F4C3B3 /* spacecomics.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9519D4DA20D88A2900F4C3B3 /* spacecomics.ttf */; };
 		953920F620D833370064DC83 /* Getraenkeunfall_Rules.csv in Resources */ = {isa = PBXBuildFile; fileRef = 953920F520D833370064DC83 /* Getraenkeunfall_Rules.csv */; };
 		953920F820D843300064DC83 /* PlayModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953920F720D843300064DC83 /* PlayModeViewController.swift */; };
 		9573F99D20D3337B003E4A17 /* GU_Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9573F99C20D3337B003E4A17 /* GU_Speech.swift */; };
@@ -60,6 +61,7 @@
 		853C9B9620CD903300BCC2CD /* AddPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayersViewController.swift; sourceTree = "<group>"; };
 		853C9B9A20CDAD6900BCC2CD /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
 		853C9B9C20D1291F00BCC2CD /* GameScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreenViewController.swift; sourceTree = "<group>"; };
+		9519D4DA20D88A2900F4C3B3 /* spacecomics.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = spacecomics.ttf; sourceTree = "<group>"; };
 		953920F520D833370064DC83 /* Getraenkeunfall_Rules.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Getraenkeunfall_Rules.csv; sourceTree = "<group>"; };
 		953920F720D843300064DC83 /* PlayModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayModeViewController.swift; sourceTree = "<group>"; };
 		9573F99C20D3337B003E4A17 /* GU_Speech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GU_Speech.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				853C9B6520CD59C900BCC2CD /* Assets.xcassets */,
 				853C9B6A20CD59C900BCC2CD /* Info.plist */,
 				853C9B6220CD59C700BCC2CD /* Getraenkeunfall.xcdatamodeld */,
+				9519D4DC20D88A3300F4C3B3 /* fonts */,
 			);
 			path = Getraenkeunfall;
 			sourceTree = "<group>";
@@ -147,6 +150,14 @@
 				853C9B8020CD59C900BCC2CD /* Info.plist */,
 			);
 			path = GetraenkeunfallUITests;
+			sourceTree = "<group>";
+		};
+		9519D4DC20D88A3300F4C3B3 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9519D4DA20D88A2900F4C3B3 /* spacecomics.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +267,7 @@
 				853C9B6920CD59C900BCC2CD /* LaunchScreen.storyboard in Resources */,
 				953920F620D833370064DC83 /* Getraenkeunfall_Rules.csv in Resources */,
 				853C9B6620CD59C900BCC2CD /* Assets.xcassets in Resources */,
+				9519D4DB20D88A2900F4C3B3 /* spacecomics.ttf in Resources */,
 				853C9B9520CD6FFA00BCC2CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
