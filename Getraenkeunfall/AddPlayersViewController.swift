@@ -9,13 +9,25 @@
 import UIKit
 import Speech
 
+protocol PlayerCellDelegate : class {
+    func playerTableViewCellValueChanged(_ sender: PlayerCell)
+}
+
 class PlayerCell : UITableViewCell{
     @IBOutlet weak var playerNameTextField: UITextField!
     @IBOutlet weak var speakerButton: UIButton!
     
+    weak var delegate: PlayerCellDelegate?
+    
+    @IBAction func textFieldValueChanged(_ sender: UITextField) {
+        delegate?.playerTableViewCellValueChanged(self)
+    }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
 }
 
 class AddPlayerCell : UITableViewCell{
@@ -26,11 +38,20 @@ class AddPlayerCell : UITableViewCell{
     }
 }
 
-class AddPlayersViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource{
+class AddPlayersViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, PlayerCellDelegate{
+    
+    func playerTableViewCellValueChanged(_ sender: PlayerCell) {
+        guard let tappedIndexPath = playerTableView.indexPath(for: sender) else { return }
+        print("Trash", sender, tappedIndexPath)
+        
+        playerNames[tappedIndexPath.row] = sender.playerNameTextField.text!
+    }
+    
     
     var playerNames:[String] = ["", "", ""]
     var rules: Rules?
     let synthAV = AVSpeechSynthesizer()
+    var previousSegueIdentifier: String?
 
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var startGameButton: UIButton!
@@ -58,6 +79,8 @@ class AddPlayersViewController: UIViewController, UITextFieldDelegate, UITableVi
             let playerName = playerNames[indexPath.row]
             cell.playerNameTextField.text = playerName
             cell.playerNameTextField.placeholder = "Spieler \(indexPath.row + 1)"
+            cell.delegate = self
+            
             //cell.speakerButton
             return cell
         }else{
@@ -65,7 +88,6 @@ class AddPlayersViewController: UIViewController, UITextFieldDelegate, UITableVi
             return cell
         }
     }
-    
 
 
 //    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -76,7 +98,6 @@ class AddPlayersViewController: UIViewController, UITextFieldDelegate, UITableVi
     //Closes the keyboard when the done button is clicked.
     
     @IBAction func addButtonClicked(_ sender: Any) {
-            setDataSourceFromCells()
             playerNames.append("")
             playerTableView.reloadData()
             playerTableView.scrollToRow(at: IndexPath(item: playerNames.count, section: 0), at: UITableViewScrollPosition.bottom, animated: true)
@@ -100,16 +121,20 @@ class AddPlayersViewController: UIViewController, UITextFieldDelegate, UITableVi
         return true
     }
     
-    func setDataSourceFromCells(){
-        for (index, cell) in playerTableView.visibleCells.enumerated() {
-            if let playerCell = cell as? PlayerCell {
-                playerNames[index] = playerCell.playerNameTextField.text!
-            }
+    @IBAction func nextButtonTouched(){
+        switch previousSegueIdentifier{
+        case "home": performSegue(withIdentifier: "PlayersToMode", sender: nil)
+        break;
+        case "game": performSegue(withIdentifier: "PlayersToGame", sender: nil)
+        break;
+        default:
+            
+            break;
         }
     }
     
+    
     func prepPlayerNames(){
-        setDataSourceFromCells()
         for (index, name) in playerNames.enumerated(){
                 playerNames[index] = name.trimmingCharacters(in: .whitespacesAndNewlines)
             }
@@ -117,7 +142,12 @@ class AddPlayersViewController: UIViewController, UITextFieldDelegate, UITableVi
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is PlayModeViewController {
+        if segue.destination is GameScreenViewController {
+            let dest = segue.destination as? GameScreenViewController
+            dest?.rules = rules
+            prepPlayerNames()
+            dest?.players = playerNames
+        }else if segue.destination is PlayModeViewController {
             let dest = segue.destination as? PlayModeViewController
             dest?.rules = rules
             prepPlayerNames()

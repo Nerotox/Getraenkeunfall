@@ -70,7 +70,7 @@ G68;Hoffentlich wurde kein Screenshot gemacht. Alle die heute schon einen Snap v
 G69;Sicher nur Spam. Alle die ihre Mails heute noch nicht gecheckt haben trinken {sipString}.;
 G70;Die Devise lautet Hodl. Alle die Coins einer Kryptowährung besitzen trinken {sipString}.;
 G71;Mr. Oder Mrs. Worldwide? Alle die mehr als eine Fremdsprache sprechen dürfen jeweils {distrAmount} verteilen.;
-G72;Benutzt das überhaupt noch jemand?. Alle die in den letzten 30 Tagen eine SMS verschickt haben trinken {sipString}.;
+G72;Benutzt das überhaupt noch jemand? Alle die in den letzten 30 Tagen eine SMS verschickt haben trinken {sipString}.;
 G73;Hello! Bonjour! Hola! Alle die Verwandschaft in einem anderen Land haben trinken {sipString}.;
 G74;Das ist ja noch fast voll! Alle Spieler die noch mehr als die Hälfte im Glas haben trinken {sipString}.;
 G75;Immer am Schafe zählen. Alle die schon mal beim Job oder in der Schule eingeschlafen sind trinken {sipString}.;
@@ -83,7 +83,7 @@ G81;Limonade ist der natürliche Feind von Bier. Alle die in den letzten 30 Tagen
 G82;Der morgendliche Zaubertrank soll in Maßen genossen werden. Alle die heute schon mehr als 3 Tassen Kaffee getrunken haben trinken {sipString}.;
 G83;Ziemlich nützlich und weit verbreitet. Alle die beim Web surfen einen Ad-Blocker benutzen trinken {sipString}.;
 #1P;#oneplayer;
-1P1;Hey {p4}! Du siehst müde aus. Trink doch mal {sipString}.;
+1P1;Hey {p1}! Du siehst müde aus. Trink doch mal {sipString}.;
 1P2;Hallo {p1}! Lese deine letzte geschriebene Whatsapp Nachricht vor und verteile {distrAmount}.;
 1P3;Hey {p1}. Ich möchte den Refrain deines Lieblingsliedes hören! Singe und verteile {distrAmount} oder trink sie selbst.;
 1P4;Yo {p1}. Heute ist dein Glückstag. Verteil {distrAmount} oder trink sie selber wenn du recht durstig bist.;

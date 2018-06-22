@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
     
     var rulesHaveBeenRead = false
     var rules: Rules?
+    let segueIdentifier = "home"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,6 +105,7 @@ class HomeViewController: UIViewController {
         if segue.destination is AddPlayersViewController{
             let dest = segue.destination as? AddPlayersViewController
             dest?.rules = rules
+            dest?.previousSegueIdentifier = segueIdentifier
         }
     }
 }

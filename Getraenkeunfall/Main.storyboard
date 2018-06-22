@@ -164,7 +164,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="5tb-jI-AYF" kind="show" id="fMv-XE-AXB"/>
+                                    <action selector="nextButtonTouched" destination="gU7-zz-T3U" eventType="touchUpInside" id="Zg4-eQ-ZQe"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPIELER HINZUFÜGEN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HE-Z0-nsd">
@@ -189,7 +189,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spieler 1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2jy-CK-JNX">
-                                                    <rect key="frame" x="40" y="4" width="250" height="35"/>
+                                                    <rect key="frame" x="40" y="4.5" width="250" height="35"/>
                                                     <color key="backgroundColor" red="0.5725490196078431" green="0.19607843137254902" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="CCf-AB-FTd"/>
@@ -202,6 +202,9 @@
                                                             <color key="value" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="textFieldValueChanged:" destination="vv0-Yz-7KY" eventType="editingChanged" id="91t-nE-Hx6"/>
+                                                    </connections>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXR-9y-5CI">
                                                     <rect key="frame" x="300" y="4.5" width="35" height="35"/>
@@ -281,6 +284,8 @@
                         <outlet property="backButton" destination="IPG-AC-hqw" id="Wzk-Ov-ggA"/>
                         <outlet property="playerTableView" destination="zM9-yO-Se1" id="0qL-Va-Lg9"/>
                         <outlet property="startGameButton" destination="i62-As-TRm" id="Vu2-aF-PHy"/>
+                        <segue destination="5tb-jI-AYF" kind="show" identifier="PlayersToMode" id="bHX-ZZ-zR6"/>
+                        <segue destination="fJl-7a-dkl" kind="show" identifier="PlayersToGame" id="ack-XQ-M04"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TbG-tM-qGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -297,7 +302,11 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFU-Uu-3G0">
                                 <rect key="frame" x="309" y="36" width="50" height="50"/>
-                                <state key="normal" image="Settings">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="47Z-My-yJq"/>
+                                    <constraint firstAttribute="width" constant="50" id="hFB-UN-i0q"/>
+                                </constraints>
+                                <state key="normal" image="changePlayMode">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -307,10 +316,11 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="addButtonClicked:" destination="gU7-zz-T3U" eventType="touchUpInside" id="R2Z-ed-HPJ"/>
+                                    <segue destination="5tb-jI-AYF" kind="show" id="fLv-Gj-PJN"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHp-lT-HvT">
-                                <rect key="frame" x="16" y="270" width="343" height="39.5"/>
+                                <rect key="frame" x="16" y="314" width="343" height="39.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -331,7 +341,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwg-wP-lDa">
-                                <rect key="frame" x="16" y="36" width="50" height="50"/>
+                                <rect key="frame" x="177" y="36" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="W63-ST-Tx9"/>
                                     <constraint firstAttribute="width" secondItem="cwg-wP-lDa" secondAttribute="height" multiplier="1:1" id="bmd-i2-NLQ"/>
@@ -342,18 +352,32 @@
                                     <action selector="voiceButtonClicked:" destination="fJl-7a-dkl" eventType="touchUpInside" id="eCO-YC-3Cu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NF4-Ez-1ZE">
+                                <rect key="frame" x="16" y="36" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="sSu-yP-JnZ"/>
+                                    <constraint firstAttribute="width" secondItem="NF4-Ez-1ZE" secondAttribute="height" multiplier="1:1" id="ylV-wk-VaO"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="quit"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="BaI-Yf-3zY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.76470588240000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="mFU-Uu-3G0" firstAttribute="leading" secondItem="AuX-Kl-33c" secondAttribute="trailing" constant="16" id="1O1-9z-1vu"/>
-                            <constraint firstItem="cwg-wP-lDa" firstAttribute="leading" secondItem="OZJ-Pk-sWX" secondAttribute="leading" constant="16" id="B7G-b1-pGW"/>
+                            <constraint firstItem="LHp-lT-HvT" firstAttribute="centerY" secondItem="e4z-PX-kRL" secondAttribute="centerY" id="7Ax-Wq-lJN"/>
                             <constraint firstItem="OZJ-Pk-sWX" firstAttribute="trailing" secondItem="mFU-Uu-3G0" secondAttribute="trailing" constant="16" id="NbC-t6-Aka"/>
                             <constraint firstAttribute="trailing" secondItem="LHp-lT-HvT" secondAttribute="trailing" constant="16" id="S2z-D2-tmB"/>
                             <constraint firstItem="cwg-wP-lDa" firstAttribute="top" secondItem="OZJ-Pk-sWX" secondAttribute="top" constant="16" id="TDQ-2n-fri"/>
+                            <constraint firstItem="AuX-Kl-33c" firstAttribute="leading" secondItem="cwg-wP-lDa" secondAttribute="trailing" constant="16" id="agf-fe-Iyf"/>
                             <constraint firstItem="LHp-lT-HvT" firstAttribute="centerX" secondItem="e4z-PX-kRL" secondAttribute="centerX" id="mF6-QY-LYI"/>
                             <constraint firstItem="LHp-lT-HvT" firstAttribute="leading" secondItem="e4z-PX-kRL" secondAttribute="leading" constant="16" id="n0X-NO-T33"/>
-                            <constraint firstItem="LHp-lT-HvT" firstAttribute="top" secondItem="OZJ-Pk-sWX" secondAttribute="top" constant="250" id="swB-rh-yhd"/>
+                            <constraint firstItem="NF4-Ez-1ZE" firstAttribute="leading" secondItem="OZJ-Pk-sWX" secondAttribute="leading" constant="16" id="rM0-p6-dmA"/>
+                            <constraint firstItem="NF4-Ez-1ZE" firstAttribute="top" secondItem="OZJ-Pk-sWX" secondAttribute="top" constant="16" id="y3z-25-luh"/>
                             <constraint firstItem="AuX-Kl-33c" firstAttribute="top" secondItem="OZJ-Pk-sWX" secondAttribute="top" constant="16" id="zAJ-df-tRk"/>
                             <constraint firstItem="mFU-Uu-3G0" firstAttribute="top" secondItem="OZJ-Pk-sWX" secondAttribute="top" constant="16" id="zbR-Ky-Gjw"/>
                         </constraints>
@@ -471,18 +495,21 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Settings" width="50" height="50"/>
         <image name="Speaker" width="750" height="750"/>
         <image name="addPlayers" width="50" height="50"/>
+        <image name="changePlayMode" width="200" height="200"/>
         <image name="facebook_icon" width="1024" height="1024"/>
         <image name="instagram_icon" width="1000" height="1000"/>
         <image name="plus" width="512" height="512"/>
+        <image name="quit" width="1600" height="1600"/>
         <image name="twitter_icon" width="512" height="512"/>
         <image name="unmutedWhite" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Hei-bS-gD6"/>
+        <segue reference="fLv-Gj-PJN"/>
+        <segue reference="ack-XQ-M04"/>
         <segue reference="ytL-n8-DN2"/>
+        <segue reference="BaI-Yf-3zY"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.078431372549019607" green="0.63137254901960782" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
 </document>

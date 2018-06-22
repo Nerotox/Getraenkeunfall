@@ -18,6 +18,7 @@ class GameScreenViewController: UIViewController {
     let synthAV = AVSpeechSynthesizer()
     var fullRules: Rules?
     let defaults = UserDefaults.standard
+    let segueIdentifier = "game"
     
     @IBOutlet weak var voiceButton: UIButton!
     @IBOutlet weak var ruleLabel: UILabel!
@@ -336,5 +337,21 @@ class GameScreenViewController: UIViewController {
         let ruleString = rules!.threePlayerGame[key]
         rules!.threePlayerGame.removeValue(forKey: key)
         return getPlayableRule(rule: ruleString!)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is AddPlayersViewController{
+            let dest = segue.destination as? AddPlayersViewController
+            dest?.rules = rules
+            dest?.playerNames = players!
+            dest?.previousSegueIdentifier = segueIdentifier
+        }else if segue.destination is PlayModeViewController{
+            let dest = segue.destination as? PlayModeViewController
+            dest?.rules = rules
+            dest?.playerNames = players!
+        }else if segue.destination is HomeViewController{
+            //let dest = segue.destination as? HomeViewController
+            //keine übergabe von parametern
+        }
     }
 }
