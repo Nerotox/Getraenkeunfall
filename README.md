@@ -4,16 +4,22 @@ Getränkeunfall is a drinking App available for Amazon Alexa and iOS.
 
 This is the Repository for the iOS branch of the App.
 
-## How to play
+Currently only available in German. (English version coming soon!)
 
-### Settings
+### How to play
+1. Press play.
+2. Enter the names of all players.
+3. Choose a gamemode.
+4. Do whatever the rules tell you to do!
 
-In the settings you can set the difficulty of the game (How much you want to drink) and if you want to enable the voice interaction.
+### Know Issues
+* Formatting errors on IPhone SE on PlayMode screen (all other devices look great in all orientations)
+* "GO PRO" button on the homescreen is still a Placeholder at this point. Was intended for monetization, but we got different plans for our business model right now.
 
-### Gameflow
+### Tested Devices
+* IPhone 6 Plus
+* IPhone 6
+* IPhone 7
 
-1. Press Play.
-2. Enter the Persons that are playing with you and press start.
-3. Do whatever the rules tell you to do!
-
-You can play new players and change the settings while you are playing, so no new guys have to wait!
+### Limitations
+We are using a Text To Speech Library provided by Apple. Therefore there might be some pronunciation errros (especially in german - the german ruleset will be reworked for release).
