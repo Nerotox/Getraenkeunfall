@@ -15,6 +15,11 @@ class HomeViewController: UIViewController {
     var rules: Rules?
     let segueIdentifier = "home"
 
+    @IBOutlet weak var instagramImageView: UIImageView!
+    @IBOutlet weak var twitterImageView: UIImageView!
+    @IBOutlet weak var facebookImageView: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if rulesHaveBeenRead == false {
@@ -22,6 +27,7 @@ class HomeViewController: UIViewController {
             readRules()
         }
     }
+
     
     //reads the rules from the provided csv and categorises them.
     func readRules(){
