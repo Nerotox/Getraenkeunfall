@@ -1,5 +1,5 @@
 #G;#general;
-G1;Alexa dankt. Mein Besitzer oder meine Besitzerin trinkt {sipString}.;
+G1;Siri dankt. Mein Besitzer oder meine Besitzerin trinkt {sipString}.;
 G2;Der Spieler oder die Spielerin die zuletzt auf dem Klo war trinkt {sipString}.;
 G3;Der Spieler oder die Spielerin dessen Glas am vollsten ist trinkt {sipString}.;
 G4;Es gibt Hartz 4 Zuschlag. Wer weniger als 30€ dabei hat trinkt {sipString}.;
@@ -16,7 +16,7 @@ G14;Puh. Chillt kurz. Mir fällt gerade nichts ein. Jeder trinkt einfach mal eine
 G15;Jeder der heute zum ersten Mal Getränkeunfall spielt trinkt {sipString} und empfiehlt es hoffentlich weiter.;
 G16;Swag! Alle die Schmuck tragen trinken {sipString}.;
 G17;Hey, wir woll'n die Eisbären sehn! Jeder der gerne Aprés Ski feiert trinkt {sipString}.;
-G18;Was soll denn das? Ich heiße gar nicht Alexa sondern Hans. Der oder diejenige die mich gerade aktiviert hat trinkt {sipString}.;
+G18;Was soll denn das? Ich heiße gar nicht Siri sondern Hans. Der oder diejenige die mich gerade aktiviert hat trinkt {sipString}.;
 G19;Ganz schön stumpf. Wer zuletzt mit seinem Kopf den Tisch berührt trinkt {sipString}.;
 G20;Jetzt sofort schnipsen! Wer am spätesten war oder nicht schnipsen kann trinkt {sipString}.;
 G21;Achtung Serienjunkies! Jeder der heute schon eine Folge einer Serie geschaut hat trinkt {sipString}.;
@@ -37,7 +37,7 @@ G35;Gott ist nicht erfreut. Alle Atheisten trinken {sipString}.;
 G36;Darf ich den streicheln? Alle die ein Haustier haben trinken pro Haustier {sipString}.;
 G37;Wo ist Christiano Ronaldo? Alle Fußballspieler oder Fußballspielerinnen trinken {sipString}.;
 G38;Sprit ist teuer, deshalb muss getankt werden. Der oder die mit der längsten Anreise trinkt {sipString}.;
-G39;Das soll nicht erniedrigend wirken. Alle, die keine Alexa besitzen trinken {sipString}.;
+G39;Das soll nicht erniedrigend wirken. Alle, die keine iPhone besitzen trinken {sipString}.;
 G40;Hoffentlich läuft gerade alles gut. Alle die in einer Beziehung sind trinken {sipString}.;
 G41;Hast du keine Taschen? Alle Spieler oder Spielerinnen deren Handy am Tisch liegt müssen jeweils {sipString} trinken.;
 G42;Arbeitslos, aber die Eltern sind stolz. Alle Studenten und Studentinnen trinken jeweils {sipString}.;
@@ -115,7 +115,7 @@ G83;Ziemlich nützlich und weit verbreitet. Alle die beim Web surfen einen Ad-Blo
 2P14;Yo {p1} und {p2}. Wessen Glas ist voller? Der oder die mit mehr im Glas trinkt {sipString}, der oder die andere darf {distrAmount} verteilen.;
 2P15;Hey {p1} und {p2}! Wenn ihr schon einmal in einem Tanzkurs wart, dürft ihr jeweils {distrAmount} verteilen. Wenn nicht trinkt ihr jeweils selbst {sipString}.;
 2P16;{p1} und {p2} sehen wie wahre Whiskey-Kenner aus! Wenn ihr Whisky mögt dürft ihr jeweils {distrAmount} verteilen. Wenn nicht trinkt jeweils {sipString}.;
-2P17;Spiel für {p1} und {p2}. Berührt mich! Also das Alexa Gerät. Wer schneller ist darf {distrAmount} verteilen. Der oder die langsamere trinkt {sipString}.;
+2P17;Spiel für {p1} und {p2}. Berührt mich! Also das Apple Gerät. Wer schneller ist darf {distrAmount} verteilen. Der oder die langsamere trinkt {sipString}.;
 2P18;Das wird bestimmt niemand bemerken. {p1}, ändere deinen Whatapp-Status für 24h auf den Wunsch von {p2} und trinke {sipString}.;
 2P19;Lass mal kosten! {p1} trinkt {sipString} aus dem Glas von {p2}.;
 2P20;Das könnte man ruhig wissen. Wie lautet deine Handynummer {p1}? Wenn du sie auswendig weißt, darfst du {distrAmount} verteilen. Trinke sonst {sipString}.;
