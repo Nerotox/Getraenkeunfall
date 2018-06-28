@@ -118,7 +118,7 @@ G83;Ziemlich nützlich und weit verbreitet. Alle die beim Web surfen einen Ad-Blo
 2P17;Spiel für {p1} und {p2}. Berührt mich! Also das Alexa Gerät. Wer schneller ist darf {distrAmount} verteilen. Der oder die langsamere trinkt {sipString}.;
 2P18;Das wird bestimmt niemand bemerken. {p1}, ändere deinen Whatapp-Status für 24h auf den Wunsch von {p2} und trinke {sipString}.;
 2P19;Lass mal kosten! {p1} trinkt {sipString} aus dem Glas von {p2}.;
-2P19;Das könnte man ruhig wissen. Wie lautet deine Handynummer {p1}? Wenn du sie auswendig weißt, darfst du {distrAmount} verteilen. Trinke sonst {sipString}.;
+2P20;Das könnte man ruhig wissen. Wie lautet deine Handynummer {p1}? Wenn du sie auswendig weißt, darfst du {distrAmount} verteilen. Trinke sonst {sipString}.;
 #3P;#threeplayer;
 3P1;Ich hoffe ihr seid heute gut vorbereitet. {p1}, {p2} und {p3} holt eure Handys heraus. Der oder die mit dem meisten Akku gewinnt. Die Verlierer trinken jeweils {sipString}.;
 3P2;Man sollte viel trinken um nicht zu dehydrieren! Nehmt euch das zu Herzen {p1}, {p2} und {p3} und trinkt {sipString}.;

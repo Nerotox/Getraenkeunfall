@@ -21,16 +21,21 @@ class GetraenkeunfallTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testImportRules() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let hvc = HomeViewController()
+        hvc.rules = Rules()s
+        hvc.readRules()
+        XCTAssertEqual(hvc.rules!.onePlayerGame.count, 15)
+        XCTAssertEqual(hvc.rules!.rulesGeneral.count, 83)
+        XCTAssertEqual(hvc.rules!.twoPlayerGame.count, 20)
+        XCTAssertEqual(hvc.rules!.threePlayerGame.count, 7)
+        XCTAssertEqual(hvc.rules!.onePlayerRuleGameRule.count, 10)
+        XCTAssertEqual(hvc.rules!.onePlayerRuleGameResolve.count, 10)
+        XCTAssertEqual(hvc.rules!.twoPlayerRuleGameRule.count, 3)
+        XCTAssertEqual(hvc.rules!.twoPlayerRuleGameResolve.count, 3)
+        XCTAssertEqual(hvc.rules!.threePlayerRuleGameRule.count, 1)
+        XCTAssertEqual(hvc.rules!.threePlayerRuleGameResolve.count, 1)
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }

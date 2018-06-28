@@ -13,7 +13,7 @@ protocol PlayerCellDelegate : class {
     func playerTableViewCellValueChanged(_ sender: PlayerCell)
 }
 
-class PlayerCell : UITableViewCell{
+class PlayerCell : UITableViewCell, UITextFieldDelegate {
     @IBOutlet weak var playerNameTextField: UITextField!
     @IBOutlet weak var speakerButton: UIButton!
     
@@ -22,7 +22,6 @@ class PlayerCell : UITableViewCell{
     @IBAction func textFieldValueChanged(_ sender: UITextField) {
         delegate?.playerTableViewCellValueChanged(self)
     }
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -80,6 +79,7 @@ class AddPlayersViewController: UIViewController, UITextFieldDelegate, UITableVi
             cell.playerNameTextField.text = playerName
             cell.playerNameTextField.placeholder = "Spieler \(indexPath.row + 1)"
             cell.delegate = self
+            cell.playerNameTextField.delegate = self
             
             //cell.speakerButton
             return cell
@@ -89,6 +89,10 @@ class AddPlayersViewController: UIViewController, UITextFieldDelegate, UITableVi
         }
     }
 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
 //    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
 //        playerNames.remove(at: indexPath.row)
@@ -114,11 +118,6 @@ class AddPlayersViewController: UIViewController, UITextFieldDelegate, UITableVi
                 }
             }
         }
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
     }
     
     @IBAction func nextButtonTouched(){
