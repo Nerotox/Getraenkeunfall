@@ -26,8 +26,28 @@ class HomeViewController: UIViewController {
             rules = Rules()
             readRules()
         }
+        instagramImageView.isUserInteractionEnabled = true
+        twitterImageView.isUserInteractionEnabled = true
+        facebookImageView.isUserInteractionEnabled = true
+        let instaGestureRecogniser = UITapGestureRecognizer(target: self, action: #selector(self.instaClicked(_:)))
+        instagramImageView.addGestureRecognizer(instaGestureRecogniser)
+        let facebookGestureRecogniser = UITapGestureRecognizer(target: self, action: #selector(self.facebookClicked(_:)))
+        facebookImageView.addGestureRecognizer(facebookGestureRecogniser)
+        let twitterGestureRecogniser = UITapGestureRecognizer(target: self, action: #selector(self.twitterClicked(_:)))
+        twitterImageView.addGestureRecognizer(twitterGestureRecogniser)
     }
-
+    
+    @objc func instaClicked(_ sender: AnyObject){
+        UIApplication.shared.open(URL(string: "http://www.instagram.com")!, options: [:])
+    }
+    
+    @objc func facebookClicked(_ sender: AnyObject){
+        UIApplication.shared.open(URL(string: "http://www.facebook.com")!, options: [:])
+    }
+    
+    @objc func twitterClicked(_ sender: AnyObject){
+        UIApplication.shared.open(URL(string: "http://www.twitter.com")!, options: [:])
+    }
     
     //reads the rules from the provided csv and categorises them.
     func readRules(){
