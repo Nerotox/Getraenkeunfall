@@ -39,18 +39,21 @@ class GetraenkeunfallUITests: XCTestCase {
         app.buttons["ZURÜCK"].tap()
         neuesSpielButton.tap()
         
-        let tablesQuery2 = app.tables
-        let spieler1TextField = tablesQuery2/*@START_MENU_TOKEN@*/.textFields["Spieler 1"]/*[[".cells.textFields[\"Spieler 1\"]",".textFields[\"Spieler 1\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        spieler1TextField.tap()
-        spieler1TextField.typeText("Test1")
+        let tablesQuery = app.tables
         
-        let spieler2TextField = tablesQuery2/*@START_MENU_TOKEN@*/.textFields["Spieler 2"]/*[[".cells.textFields[\"Spieler 2\"]",".textFields[\"Spieler 2\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        tablesQuery/*@START_MENU_TOKEN@*/.textFields["Spieler 1"]/*[[".cells.textFields[\"Spieler 1\"]",".textFields[\"Spieler 1\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery.textFields["Spieler 1"].typeText("Test 1")
+        
+        let spieler2TextField = tablesQuery/*@START_MENU_TOKEN@*/.textFields["Spieler 2"]/*[[".cells.textFields[\"Spieler 2\"]",".textFields[\"Spieler 2\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
         spieler2TextField.tap()
-        spieler2TextField.typeText("Test2")
+        spieler2TextField.typeText("Test 2")
         
-        let spieler3TextField = tablesQuery2/*@START_MENU_TOKEN@*/.textFields["Spieler 3"]/*[[".cells.textFields[\"Spieler 3\"]",".textFields[\"Spieler 3\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        let spieler3TextField = tablesQuery/*@START_MENU_TOKEN@*/.textFields["Spieler 3"]/*[[".cells.textFields[\"Spieler 3\"]",".textFields[\"Spieler 3\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
         spieler3TextField.tap()
-        spieler3TextField.typeText("Test3")
+        spieler3TextField.typeText("Test 3")
+        
+        let window = app.children(matching: .window).element(boundBy: 0)
+        window.children(matching: .other).element(boundBy: 2).children(matching: .other).element.children(matching: .table).element.tap()
         
         let weiterButton = app.buttons["WEITER"]
         weiterButton.tap()
@@ -59,24 +62,19 @@ class GetraenkeunfallUITests: XCTestCase {
         let button = app.buttons["Button"]
         button.tap()
         button.tap()
-        app.buttons["addPlayers"].tap()
-        
-        let tablesQuery = tablesQuery2
-        tablesQuery/*@START_MENU_TOKEN@*/.buttons["plus"]/*[[".cells.buttons[\"plus\"]",".buttons[\"plus\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        let spieler4TextField = tablesQuery.textFields["Spieler 4"]
-        spieler4TextField.tap()
-        spieler4TextField.typeText("Test 4")
-            
-        
-        weiterButton.tap()
         
         let changeplaymodeButton = app.buttons["changePlayMode"]
         changeplaymodeButton.tap()
         app.buttons["NORMAL"].tap()
         changeplaymodeButton.tap()
         app.buttons["GETRÄNKEUNFALL"].tap()
+        app.buttons["addPlayers"].tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.buttons["plus"]/*[[".cells.buttons[\"plus\"]",".buttons[\"plus\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.textFields["Spieler 4"]/*[[".cells.textFields[\"Spieler 4\"]",".textFields[\"Spieler 4\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery.textFields["Spieler 4"].typeText("Test 4")
+        window.children(matching: .other).element(boundBy: 9).children(matching: .other).element.children(matching: .table).element.tap()
+        weiterButton.tap()
         app.buttons["quit"].tap()
-        
         
     }
     
