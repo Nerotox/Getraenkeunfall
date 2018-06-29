@@ -121,14 +121,14 @@ class AddPlayersViewController: UIViewController, UITextFieldDelegate, UITableVi
     }
     
     @IBAction func nextButtonTouched(){
+        prepPlayerNames();
+        if playerNames.count != 0 {
         switch previousSegueIdentifier{
-        case "home": performSegue(withIdentifier: "PlayersToMode", sender: nil)
-        break;
-        case "game": performSegue(withIdentifier: "PlayersToGame", sender: nil)
-        break;
-        default:
-            
-            break;
+            case "home": performSegue(withIdentifier: "PlayersToMode", sender: nil)
+            case "game": performSegue(withIdentifier: "PlayersToGame", sender: nil)
+            default:
+                break;
+            }
         }
     }
     
