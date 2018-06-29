@@ -135,15 +135,18 @@ class GameScreenViewController: UIViewController {
     
     func getPlayableRule(rule:String) -> String {
         let rndPlayer1 = arc4random_uniform(UInt32(players!.count))
-        var rndPlayer2: UInt32
-        var rndPlayer3: UInt32
-        repeat {
-            rndPlayer2 = arc4random_uniform(UInt32(players!.count))
-        } while (rndPlayer1 == rndPlayer2)
-        repeat {
-            rndPlayer3 = arc4random_uniform(UInt32(players!.count))
-        } while (rndPlayer3 == rndPlayer1 || rndPlayer3 == rndPlayer2)
-        
+        var rndPlayer2: UInt32 = UInt32(0)
+        var rndPlayer3: UInt32 = UInt32(0)
+        if(players!.count > 1){
+            repeat {
+                rndPlayer2 = arc4random_uniform(UInt32(players!.count))
+            } while (rndPlayer1 == rndPlayer2)
+            if(players!.count > 2){
+                repeat {
+                    rndPlayer3 = arc4random_uniform(UInt32(players!.count))
+                } while (rndPlayer3 == rndPlayer1 || rndPlayer3 == rndPlayer2)
+            }
+        }
         return rule.replacingOccurrences(of: "{p1}", with: players![Int(rndPlayer1)]).replacingOccurrences(of: "{p2}", with: players![Int(rndPlayer2)]).replacingOccurrences(of: "{p3}", with: players![Int(rndPlayer3)]).replacingOccurrences(of: "{sipString}", with: getSipAmount()).replacingOccurrences(of: "{distrAmount}", with: getDistrAmount())
     }
     
@@ -245,14 +248,18 @@ class GameScreenViewController: UIViewController {
     
     func getPlayableRule(rule:String, solution:String) -> (String, String){
         let rndPlayer1 = arc4random_uniform(UInt32(players!.count))
-        var rndPlayer2: UInt32
-        var rndPlayer3: UInt32
-        repeat {
-            rndPlayer2 = arc4random_uniform(UInt32(players!.count))
-        } while (rndPlayer1 == rndPlayer2)
-        repeat {
-            rndPlayer3 = arc4random_uniform(UInt32(players!.count))
-        } while (rndPlayer3 == rndPlayer1 && rndPlayer3 == rndPlayer2)
+        var rndPlayer2: UInt32 = UInt32(0)
+        var rndPlayer3: UInt32 = UInt32(0)
+        if(players!.count > 1){
+            repeat {
+                rndPlayer2 = arc4random_uniform(UInt32(players!.count))
+            } while (rndPlayer1 == rndPlayer2)
+            if(players!.count > 2){
+                repeat {
+                    rndPlayer3 = arc4random_uniform(UInt32(players!.count))
+                } while (rndPlayer3 == rndPlayer1 || rndPlayer3 == rndPlayer2)
+            }
+        }
         
         return (rule.replacingOccurrences(of: "{p1}", with: players![Int(rndPlayer1)]).replacingOccurrences(of: "{p2}", with: players![Int(rndPlayer2)]).replacingOccurrences(of: "{p3}", with: players![Int(rndPlayer3)]), solution.replacingOccurrences(of: "{p1}", with: players![Int(rndPlayer1)]).replacingOccurrences(of: "{p2}", with: players![Int(rndPlayer2)]).replacingOccurrences(of: "{p3}", with: players![Int(rndPlayer3)]))
     }
@@ -262,7 +269,7 @@ class GameScreenViewController: UIViewController {
             rules!.onePlayerRuleGameRule = fullRules!.onePlayerRuleGameRule
             rules!.onePlayerRuleGameResolve = fullRules!.onePlayerRuleGameResolve
         }
-        let rndRuleNumber = arc4random_uniform(UInt32(rules!.twoPlayerRuleGameRule.values.count))
+        let rndRuleNumber = arc4random_uniform(UInt32(rules!.onePlayerRuleGameRule.values.count))
         let key = Array(rules!.onePlayerRuleGameRule.keys)[Int(rndRuleNumber)]
         roleGamesCurrentlyInPlay[key] = Int(arc4random_uniform(7)) + 4;
         let ruleString = rules!.onePlayerRuleGameRule[key]
